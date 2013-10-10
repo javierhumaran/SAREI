@@ -4,6 +4,8 @@
  */
 package administrarAgenda;
 
+import java.awt.Cursor;
+
 /**
  *
  * @author JHumaran
@@ -11,10 +13,11 @@ package administrarAgenda;
 public class pantallaPrincipal extends javax.swing.JFrame {
 
     /**
-     * Creates new form pantallaPrincipal
+     * Creates new form NewJFrame
      */
     public pantallaPrincipal() {
         initComponents();
+        this.setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -25,22 +28,927 @@ public class pantallaPrincipal extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
+        java.awt.GridBagConstraints gridBagConstraints;
+
+        containerPanel3 = new javax.swing.JPanel();
+        headerPanel3 = new javax.swing.JPanel();
+        detailHeaderPanel3 = new javax.swing.JPanel();
+        botonNuevaCita = new javax.swing.JLabel();
+        botonImprimir = new javax.swing.JLabel();
+        iconoCalendar = new javax.swing.JLabel();
+        labelEvento = new javax.swing.JLabel();
+        botonEvento = new javax.swing.JLabel();
+        diaLabel = new javax.swing.JLabel();
+        botonDia = new javax.swing.JLabel();
+        contentPanel = new javax.swing.JPanel();
+        checkInSabadoPanel = new javax.swing.JPanel();
+        botonCheckInSabado_2_3 = new javax.swing.JButton();
+        botonCheckInSabado_2_4 = new javax.swing.JButton();
+        botonCheckInSabado_2_5 = new javax.swing.JButton();
+        botonCheckInSabado_2_6 = new javax.swing.JButton();
+        botonCheckInSabado_2_7 = new javax.swing.JButton();
+        botonCheckInSabado_3_3 = new javax.swing.JButton();
+        botonCheckInSabado_3_4 = new javax.swing.JButton();
+        botonCheckInSabado_3_5 = new javax.swing.JButton();
+        botonCheckInSabado_3_6 = new javax.swing.JButton();
+        botonCheckInSabado_3_7 = new javax.swing.JButton();
+        botonCheckInSabado_4_3 = new javax.swing.JButton();
+        botonCheckInSabado_4_4 = new javax.swing.JButton();
+        botonCheckInSabado_4_5 = new javax.swing.JButton();
+        botonCheckInSabado_4_6 = new javax.swing.JButton();
+        botonCheckInSabado_4_7 = new javax.swing.JButton();
+        labelAla = new javax.swing.JLabel();
+        labelMujeres1 = new javax.swing.JLabel();
+        labelHombres1 = new javax.swing.JLabel();
+        labelMujeres2 = new javax.swing.JLabel();
+        labelHombres2 = new javax.swing.JLabel();
+        labelMujeres3 = new javax.swing.JLabel();
+        labelHombres3 = new javax.swing.JLabel();
+        labelHora_1 = new javax.swing.JLabel();
+        labelHora_2 = new javax.swing.JLabel();
+        labelHora_3 = new javax.swing.JLabel();
+        labelHora_4 = new javax.swing.JLabel();
+        labelHora_5 = new javax.swing.JLabel();
+        labelHora_6 = new javax.swing.JLabel();
+        labelHora_7 = new javax.swing.JLabel();
+        labelHora_8 = new javax.swing.JLabel();
+        labelHora_9 = new javax.swing.JLabel();
+        labelHora_10 = new javax.swing.JLabel();
+        labelHora_11 = new javax.swing.JLabel();
+        labelHora_12 = new javax.swing.JLabel();
+        labelHora_13 = new javax.swing.JLabel();
+        labelHora_14 = new javax.swing.JLabel();
+        labelHora_15 = new javax.swing.JLabel();
+        labelHora_16 = new javax.swing.JLabel();
+        botonM1_1 = new javax.swing.JLabel();
+        botonM1_2 = new javax.swing.JLabel();
+        botonM1_3 = new javax.swing.JLabel();
+        botonM1_4 = new javax.swing.JLabel();
+        botonM1_5 = new javax.swing.JLabel();
+        botonM1_6 = new javax.swing.JLabel();
+        botonM1_7 = new javax.swing.JLabel();
+        botonM1_8 = new javax.swing.JLabel();
+        botonM1_9 = new javax.swing.JLabel();
+        botonM1_10 = new javax.swing.JLabel();
+        botonM1_11 = new javax.swing.JLabel();
+        botonM1_12 = new javax.swing.JLabel();
+        botonM1_13 = new javax.swing.JLabel();
+        botonM1_14 = new javax.swing.JLabel();
+        botonM1_15 = new javax.swing.JLabel();
+        botonM1_16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        containerPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        containerPanel3.setForeground(new java.awt.Color(255, 255, 255));
+
+        headerPanel3.setBackground(new java.awt.Color(217, 217, 217));
+
+        detailHeaderPanel3.setBackground(new java.awt.Color(191, 191, 191));
+
+        javax.swing.GroupLayout detailHeaderPanel3Layout = new javax.swing.GroupLayout(detailHeaderPanel3);
+        detailHeaderPanel3.setLayout(detailHeaderPanel3Layout);
+        detailHeaderPanel3Layout.setHorizontalGroup(
+            detailHeaderPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        detailHeaderPanel3Layout.setVerticalGroup(
+            detailHeaderPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 5, Short.MAX_VALUE)
+        );
+
+        botonNuevaCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/nuevaCita.png"))); // NOI18N
+        botonNuevaCita.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                botonNuevaCitaMouseWheelMoved(evt);
+            }
+        });
+        botonNuevaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonNuevaCitaMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonNuevaCitaMouseExited(evt);
+            }
+        });
+        botonNuevaCita.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                botonNuevaCitaMouseMoved(evt);
+            }
+        });
+
+        botonImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/imprimirCitas.png"))); // NOI18N
+        botonImprimir.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                botonImprimirMouseWheelMoved(evt);
+            }
+        });
+        botonImprimir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonImprimirMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonImprimirMouseExited(evt);
+            }
+        });
+        botonImprimir.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                botonImprimirMouseMoved(evt);
+            }
+        });
+
+        iconoCalendar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/Google Calendar Icon.png"))); // NOI18N
+        iconoCalendar.addMouseWheelListener(new java.awt.event.MouseWheelListener() {
+            public void mouseWheelMoved(java.awt.event.MouseWheelEvent evt) {
+                iconoCalendarMouseWheelMoved(evt);
+            }
+        });
+        iconoCalendar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                iconoCalendarMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                iconoCalendarMouseExited(evt);
+            }
+        });
+        iconoCalendar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                iconoCalendarMouseMoved(evt);
+            }
+        });
+
+        labelEvento.setFont(new java.awt.Font("Roboto Cn", 0, 32)); // NOI18N
+        labelEvento.setForeground(new java.awt.Color(51, 51, 51));
+        labelEvento.setText("Check-In");
+
+        botonEvento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/flecha.png"))); // NOI18N
+
+        javax.swing.GroupLayout headerPanel3Layout = new javax.swing.GroupLayout(headerPanel3);
+        headerPanel3.setLayout(headerPanel3Layout);
+        headerPanel3Layout.setHorizontalGroup(
+            headerPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanel3Layout.createSequentialGroup()
+                .addGap(5, 5, 5)
+                .addComponent(iconoCalendar, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelEvento)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonEvento)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(botonImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5)
+                .addComponent(botonNuevaCita, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(5, 5, 5))
+            .addComponent(detailHeaderPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        headerPanel3Layout.setVerticalGroup(
+            headerPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(headerPanel3Layout.createSequentialGroup()
+                .addGroup(headerPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(headerPanel3Layout.createSequentialGroup()
+                        .addGap(5, 5, 5)
+                        .addGroup(headerPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botonNuevaCita, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(botonImprimir, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, headerPanel3Layout.createSequentialGroup()
+                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGroup(headerPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(iconoCalendar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(labelEvento, javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botonEvento, javax.swing.GroupLayout.Alignment.TRAILING))))
+                .addGap(18, 18, 18)
+                .addComponent(detailHeaderPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+        );
+
+        diaLabel.setFont(new java.awt.Font("Roboto Cn", 0, 32)); // NOI18N
+        diaLabel.setForeground(new java.awt.Color(51, 51, 51));
+        diaLabel.setText("Domingo");
+
+        botonDia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/flecha.png"))); // NOI18N
+
+        contentPanel.setBackground(new java.awt.Color(255, 255, 255));
+        contentPanel.setLayout(new java.awt.CardLayout());
+
+        checkInSabadoPanel.setBackground(new java.awt.Color(255, 255, 255));
+        checkInSabadoPanel.setLayout(new java.awt.GridBagLayout());
+
+        botonCheckInSabado_2_3.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_2_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_2_3.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_2_3, gridBagConstraints);
+
+        botonCheckInSabado_2_4.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_2_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_2_4.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_2_4, gridBagConstraints);
+
+        botonCheckInSabado_2_5.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_2_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_2_5.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_2_5, gridBagConstraints);
+
+        botonCheckInSabado_2_6.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_2_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_2_6.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_2_6, gridBagConstraints);
+
+        botonCheckInSabado_2_7.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_2_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_2_7.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_2_7, gridBagConstraints);
+
+        botonCheckInSabado_3_3.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_3_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_3_3.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_3_3, gridBagConstraints);
+
+        botonCheckInSabado_3_4.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_3_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_3_4.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_3_4, gridBagConstraints);
+
+        botonCheckInSabado_3_5.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_3_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_3_5.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_3_5, gridBagConstraints);
+
+        botonCheckInSabado_3_6.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_3_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_3_6.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_3_6, gridBagConstraints);
+
+        botonCheckInSabado_3_7.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_3_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_3_7.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_3_7, gridBagConstraints);
+
+        botonCheckInSabado_4_3.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_4_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_4_3.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 3;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_4_3, gridBagConstraints);
+
+        botonCheckInSabado_4_4.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_4_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_4_4.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 4;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_4_4, gridBagConstraints);
+
+        botonCheckInSabado_4_5.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_4_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_4_5.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 5;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_4_5, gridBagConstraints);
+
+        botonCheckInSabado_4_6.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_4_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_4_6.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 6;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_4_6, gridBagConstraints);
+
+        botonCheckInSabado_4_7.setBackground(new java.awt.Color(255, 255, 255));
+        botonCheckInSabado_4_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonCheckInSabado_4_7.setPreferredSize(new java.awt.Dimension(72, 67));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 7;
+        gridBagConstraints.anchor = java.awt.GridBagConstraints.WEST;
+        checkInSabadoPanel.add(botonCheckInSabado_4_7, gridBagConstraints);
+
+        labelAla.setBackground(new java.awt.Color(242, 242, 242));
+        labelAla.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelAla.setForeground(new java.awt.Color(127, 127, 127));
+        labelAla.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelAla.setText("Ala");
+        labelAla.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelAla.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelAla.setPreferredSize(new java.awt.Dimension(180, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelAla, gridBagConstraints);
+
+        labelMujeres1.setBackground(new java.awt.Color(242, 242, 242));
+        labelMujeres1.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelMujeres1.setForeground(new java.awt.Color(127, 127, 127));
+        labelMujeres1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelMujeres1.setText("Mujeres 1");
+        labelMujeres1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelMujeres1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelMujeres1.setPreferredSize(new java.awt.Dimension(180, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(labelMujeres1, gridBagConstraints);
+
+        labelHombres1.setBackground(new java.awt.Color(242, 242, 242));
+        labelHombres1.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHombres1.setForeground(new java.awt.Color(127, 127, 127));
+        labelHombres1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHombres1.setText("Hombres 1");
+        labelHombres1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHombres1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHombres1.setPreferredSize(new java.awt.Dimension(180, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 3;
+        checkInSabadoPanel.add(labelHombres1, gridBagConstraints);
+
+        labelMujeres2.setBackground(new java.awt.Color(242, 242, 242));
+        labelMujeres2.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelMujeres2.setForeground(new java.awt.Color(127, 127, 127));
+        labelMujeres2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelMujeres2.setText("Mujeres 2");
+        labelMujeres2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelMujeres2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelMujeres2.setPreferredSize(new java.awt.Dimension(180, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 4;
+        checkInSabadoPanel.add(labelMujeres2, gridBagConstraints);
+
+        labelHombres2.setBackground(new java.awt.Color(242, 242, 242));
+        labelHombres2.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHombres2.setForeground(new java.awt.Color(127, 127, 127));
+        labelHombres2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHombres2.setText("Hombres 2");
+        labelHombres2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHombres2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHombres2.setPreferredSize(new java.awt.Dimension(180, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 5;
+        checkInSabadoPanel.add(labelHombres2, gridBagConstraints);
+
+        labelMujeres3.setBackground(new java.awt.Color(242, 242, 242));
+        labelMujeres3.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelMujeres3.setForeground(new java.awt.Color(127, 127, 127));
+        labelMujeres3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelMujeres3.setText("Mujeres 3");
+        labelMujeres3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelMujeres3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelMujeres3.setPreferredSize(new java.awt.Dimension(180, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 6;
+        checkInSabadoPanel.add(labelMujeres3, gridBagConstraints);
+
+        labelHombres3.setBackground(new java.awt.Color(242, 242, 242));
+        labelHombres3.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHombres3.setForeground(new java.awt.Color(127, 127, 127));
+        labelHombres3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHombres3.setText("Hombres 3");
+        labelHombres3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHombres3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHombres3.setPreferredSize(new java.awt.Dimension(180, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 0;
+        gridBagConstraints.gridy = 7;
+        checkInSabadoPanel.add(labelHombres3, gridBagConstraints);
+
+        labelHora_1.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_1.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_1.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_1.setText("9:00");
+        labelHora_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_1.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_1, gridBagConstraints);
+
+        labelHora_2.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_2.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_2.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_2.setText("9:30");
+        labelHora_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_2.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_2, gridBagConstraints);
+
+        labelHora_3.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_3.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_3.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_3.setText("10:00");
+        labelHora_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_3.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_3, gridBagConstraints);
+
+        labelHora_4.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_4.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_4.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_4.setText("10:30");
+        labelHora_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_4.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_4, gridBagConstraints);
+
+        labelHora_5.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_5.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_5.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_5.setText("11:00");
+        labelHora_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_5.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_5, gridBagConstraints);
+
+        labelHora_6.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_6.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_6.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_6.setText("11:30");
+        labelHora_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_6.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_6, gridBagConstraints);
+
+        labelHora_7.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_7.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_7.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_7.setText("12:00");
+        labelHora_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_7.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_7, gridBagConstraints);
+
+        labelHora_8.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_8.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_8.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_8.setText("12:30");
+        labelHora_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_8.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_8, gridBagConstraints);
+
+        labelHora_9.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_9.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_9.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_9.setText("13:00");
+        labelHora_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_9.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 9;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_9, gridBagConstraints);
+
+        labelHora_10.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_10.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_10.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_10.setText("13:30");
+        labelHora_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_10.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 10;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_10, gridBagConstraints);
+
+        labelHora_11.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_11.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_11.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_11.setText("14:00");
+        labelHora_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_11.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 11;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_11, gridBagConstraints);
+
+        labelHora_12.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_12.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_12.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_12.setText("14:30");
+        labelHora_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_12.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 12;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_12, gridBagConstraints);
+
+        labelHora_13.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_13.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_13.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_13.setText("15:00");
+        labelHora_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_13.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 13;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_13, gridBagConstraints);
+
+        labelHora_14.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_14.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_14.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_14.setText("15:30");
+        labelHora_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_14.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 14;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_14, gridBagConstraints);
+
+        labelHora_15.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_15.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_15.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_15.setText("16:00");
+        labelHora_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_15.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 15;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_15, gridBagConstraints);
+
+        labelHora_16.setBackground(new java.awt.Color(255, 255, 255));
+        labelHora_16.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        labelHora_16.setForeground(new java.awt.Color(166, 166, 166));
+        labelHora_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelHora_16.setText("16:30");
+        labelHora_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        labelHora_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        labelHora_16.setPreferredSize(new java.awt.Dimension(74, 60));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 16;
+        gridBagConstraints.gridy = 1;
+        checkInSabadoPanel.add(labelHora_16, gridBagConstraints);
+
+        botonM1_1.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_1.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_1.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/citaAzul_1.png"))); // NOI18N
+        botonM1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_1.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 1;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_1, gridBagConstraints);
+
+        botonM1_2.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_2.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_2.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/citaAzul_2.png"))); // NOI18N
+        botonM1_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_2.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 2;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_2, gridBagConstraints);
+
+        botonM1_3.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_3.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_3.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_3.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 3;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_3, gridBagConstraints);
+
+        botonM1_4.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_4.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_4.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_4.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 4;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_4, gridBagConstraints);
+
+        botonM1_5.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_5.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_5.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_5.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 5;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_5, gridBagConstraints);
+
+        botonM1_6.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_6.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_6.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_6.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 6;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_6, gridBagConstraints);
+
+        botonM1_7.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_7.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_7.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_7.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 7;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_7, gridBagConstraints);
+
+        botonM1_8.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_8.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_8.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_8.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 8;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_8, gridBagConstraints);
+
+        botonM1_9.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_9.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_9.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_9.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 9;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_9, gridBagConstraints);
+
+        botonM1_10.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_10.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_10.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_10.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 10;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_10, gridBagConstraints);
+
+        botonM1_11.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_11.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_11.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_11.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 11;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_11, gridBagConstraints);
+
+        botonM1_12.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_12.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_12.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_12.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 12;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_12, gridBagConstraints);
+
+        botonM1_13.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_13.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_13.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_13.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 13;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_13, gridBagConstraints);
+
+        botonM1_14.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_14.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_14.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_14.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 14;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_14, gridBagConstraints);
+
+        botonM1_15.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_15.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_15.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_15.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 15;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_15, gridBagConstraints);
+
+        botonM1_16.setBackground(new java.awt.Color(255, 255, 255));
+        botonM1_16.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
+        botonM1_16.setForeground(new java.awt.Color(166, 166, 166));
+        botonM1_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        botonM1_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
+        botonM1_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        botonM1_16.setPreferredSize(new java.awt.Dimension(74, 83));
+        gridBagConstraints = new java.awt.GridBagConstraints();
+        gridBagConstraints.gridx = 16;
+        gridBagConstraints.gridy = 2;
+        checkInSabadoPanel.add(botonM1_16, gridBagConstraints);
+
+        contentPanel.add(checkInSabadoPanel, "card2");
+
+        javax.swing.GroupLayout containerPanel3Layout = new javax.swing.GroupLayout(containerPanel3);
+        containerPanel3.setLayout(containerPanel3Layout);
+        containerPanel3Layout.setHorizontalGroup(
+            containerPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(headerPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(contentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(containerPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(diaLabel)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonDia)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        containerPanel3Layout.setVerticalGroup(
+            containerPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(containerPanel3Layout.createSequentialGroup()
+                .addComponent(headerPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(containerPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(diaLabel)
+                    .addComponent(botonDia))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(contentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(containerPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(containerPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void botonNuevaCitaMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_botonNuevaCitaMouseWheelMoved
+
+    }//GEN-LAST:event_botonNuevaCitaMouseWheelMoved
+
+    private void botonNuevaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonNuevaCitaMouseClicked
+        
+    }//GEN-LAST:event_botonNuevaCitaMouseClicked
+
+    private void botonNuevaCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonNuevaCitaMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_botonNuevaCitaMouseExited
+
+    private void botonNuevaCitaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonNuevaCitaMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_botonNuevaCitaMouseMoved
+
+    private void botonImprimirMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_botonImprimirMouseWheelMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonImprimirMouseWheelMoved
+
+    private void botonImprimirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonImprimirMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonImprimirMouseClicked
+
+    private void botonImprimirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonImprimirMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonImprimirMouseExited
+
+    private void botonImprimirMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonImprimirMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_botonImprimirMouseMoved
+
+    private void iconoCalendarMouseWheelMoved(java.awt.event.MouseWheelEvent evt) {//GEN-FIRST:event_iconoCalendarMouseWheelMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iconoCalendarMouseWheelMoved
+
+    private void iconoCalendarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoCalendarMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iconoCalendarMouseClicked
+
+    private void iconoCalendarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoCalendarMouseExited
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iconoCalendarMouseExited
+
+    private void iconoCalendarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_iconoCalendarMouseMoved
+        // TODO add your handling code here:
+    }//GEN-LAST:event_iconoCalendarMouseMoved
 
     /**
      * @param args the command line arguments
@@ -77,5 +985,71 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton botonCheckInSabado_2_3;
+    private javax.swing.JButton botonCheckInSabado_2_4;
+    private javax.swing.JButton botonCheckInSabado_2_5;
+    private javax.swing.JButton botonCheckInSabado_2_6;
+    private javax.swing.JButton botonCheckInSabado_2_7;
+    private javax.swing.JButton botonCheckInSabado_3_3;
+    private javax.swing.JButton botonCheckInSabado_3_4;
+    private javax.swing.JButton botonCheckInSabado_3_5;
+    private javax.swing.JButton botonCheckInSabado_3_6;
+    private javax.swing.JButton botonCheckInSabado_3_7;
+    private javax.swing.JButton botonCheckInSabado_4_3;
+    private javax.swing.JButton botonCheckInSabado_4_4;
+    private javax.swing.JButton botonCheckInSabado_4_5;
+    private javax.swing.JButton botonCheckInSabado_4_6;
+    private javax.swing.JButton botonCheckInSabado_4_7;
+    private javax.swing.JLabel botonDia;
+    private javax.swing.JLabel botonEvento;
+    private javax.swing.JLabel botonImprimir;
+    private javax.swing.JLabel botonM1_1;
+    private javax.swing.JLabel botonM1_10;
+    private javax.swing.JLabel botonM1_11;
+    private javax.swing.JLabel botonM1_12;
+    private javax.swing.JLabel botonM1_13;
+    private javax.swing.JLabel botonM1_14;
+    private javax.swing.JLabel botonM1_15;
+    private javax.swing.JLabel botonM1_16;
+    private javax.swing.JLabel botonM1_2;
+    private javax.swing.JLabel botonM1_3;
+    private javax.swing.JLabel botonM1_4;
+    private javax.swing.JLabel botonM1_5;
+    private javax.swing.JLabel botonM1_6;
+    private javax.swing.JLabel botonM1_7;
+    private javax.swing.JLabel botonM1_8;
+    private javax.swing.JLabel botonM1_9;
+    private javax.swing.JLabel botonNuevaCita;
+    private javax.swing.JPanel checkInSabadoPanel;
+    private javax.swing.JPanel containerPanel3;
+    private javax.swing.JPanel contentPanel;
+    private javax.swing.JPanel detailHeaderPanel3;
+    private javax.swing.JLabel diaLabel;
+    private javax.swing.JPanel headerPanel3;
+    private javax.swing.JLabel iconoCalendar;
+    private javax.swing.JLabel labelAla;
+    private javax.swing.JLabel labelEvento;
+    private javax.swing.JLabel labelHombres1;
+    private javax.swing.JLabel labelHombres2;
+    private javax.swing.JLabel labelHombres3;
+    private javax.swing.JLabel labelHora_1;
+    private javax.swing.JLabel labelHora_10;
+    private javax.swing.JLabel labelHora_11;
+    private javax.swing.JLabel labelHora_12;
+    private javax.swing.JLabel labelHora_13;
+    private javax.swing.JLabel labelHora_14;
+    private javax.swing.JLabel labelHora_15;
+    private javax.swing.JLabel labelHora_16;
+    private javax.swing.JLabel labelHora_2;
+    private javax.swing.JLabel labelHora_3;
+    private javax.swing.JLabel labelHora_4;
+    private javax.swing.JLabel labelHora_5;
+    private javax.swing.JLabel labelHora_6;
+    private javax.swing.JLabel labelHora_7;
+    private javax.swing.JLabel labelHora_8;
+    private javax.swing.JLabel labelHora_9;
+    private javax.swing.JLabel labelMujeres1;
+    private javax.swing.JLabel labelMujeres2;
+    private javax.swing.JLabel labelMujeres3;
     // End of variables declaration//GEN-END:variables
 }
