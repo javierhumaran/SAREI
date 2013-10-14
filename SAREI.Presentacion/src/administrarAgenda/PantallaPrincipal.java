@@ -3862,8 +3862,8 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private void checkIn_BotonM1_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_1MouseClicked
         
         if (evt.getClickCount() == 2) {
-        AgregarCita agregarCita = new AgregarCita();
-        agregarCita.setVisible(true);
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
         }
         
     }//GEN-LAST:event_checkIn_BotonM1_1MouseClicked
