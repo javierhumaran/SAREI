@@ -16,7 +16,7 @@ import javax.swing.JPanel;
  *
  * @author JHumaran
  */
-public class pantallaPrincipal extends javax.swing.JFrame {
+public class PantallaPrincipal extends javax.swing.JFrame {
 
     private CardLayout cardLayout = new CardLayout();
     ImageIcon citaAzul_1 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaAzul_1.png"); 
@@ -35,7 +35,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
     /**
      * Creates new form NewJFrame
      */
-    public pantallaPrincipal() {
+    public PantallaPrincipal() {
         this.setExtendedState(MAXIMIZED_BOTH);
         initComponents();
         contentPanel.setLayout(cardLayout);
@@ -331,6 +331,8 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_16 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Agenda de Citas");
+        setResizable(false);
 
         containerPanel.setBackground(new java.awt.Color(255, 255, 255));
         containerPanel.setForeground(new java.awt.Color(255, 255, 255));
@@ -351,8 +353,34 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         );
 
         botonNuevaCita.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/nuevaCita.png"))); // NOI18N
+        botonNuevaCita.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonNuevaCitaMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonNuevaCitaMouseExited(evt);
+            }
+        });
+        botonNuevaCita.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                botonNuevaCitaMouseMoved(evt);
+            }
+        });
 
         botonImprimir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/imprimirCitas.png"))); // NOI18N
+        botonImprimir.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonImprimirMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonImprimirMouseExited(evt);
+            }
+        });
+        botonImprimir.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                botonImprimirMouseMoved(evt);
+            }
+        });
 
         iconoCalendar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/Google Calendar Icon.png"))); // NOI18N
 
@@ -363,12 +391,28 @@ public class pantallaPrincipal extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 labelEventoMouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                labelEventoMouseExited(evt);
+            }
+        });
+        labelEvento.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                labelEventoMouseMoved(evt);
+            }
         });
 
         botonEvento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/flecha.png"))); // NOI18N
         botonEvento.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botonEventoMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonEventoMouseExited(evt);
+            }
+        });
+        botonEvento.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                botonEventoMouseMoved(evt);
             }
         });
 
@@ -418,12 +462,28 @@ public class pantallaPrincipal extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 diaLabelMouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                diaLabelMouseExited(evt);
+            }
+        });
+        diaLabel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                diaLabelMouseMoved(evt);
+            }
         });
 
         botonDia.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/flecha.png"))); // NOI18N
         botonDia.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botonDiaMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonDiaMouseExited(evt);
+            }
+        });
+        botonDia.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                botonDiaMouseMoved(evt);
             }
         });
 
@@ -440,6 +500,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelAla.setText("Ala");
         checkIn_LabelAla.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelAla.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelAla.setOpaque(true);
         checkIn_LabelAla.setPreferredSize(new java.awt.Dimension(180, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -453,6 +514,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelMujeres1.setText("Mujeres 1");
         checkIn_LabelMujeres1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelMujeres1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelMujeres1.setOpaque(true);
         checkIn_LabelMujeres1.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -466,6 +528,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHombres1.setText("Hombres 1");
         checkIn_LabelHombres1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHombres1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHombres1.setOpaque(true);
         checkIn_LabelHombres1.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -479,6 +542,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelMujeres2.setText("Mujeres 2");
         checkIn_LabelMujeres2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelMujeres2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelMujeres2.setOpaque(true);
         checkIn_LabelMujeres2.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -492,6 +556,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHombres2.setText("Hombres 2");
         checkIn_LabelHombres2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHombres2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHombres2.setOpaque(true);
         checkIn_LabelHombres2.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -505,6 +570,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelMujeres3.setText("Mujeres 3");
         checkIn_LabelMujeres3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelMujeres3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelMujeres3.setOpaque(true);
         checkIn_LabelMujeres3.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -518,6 +584,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHombres3.setText("Hombres 3");
         checkIn_LabelHombres3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHombres3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHombres3.setOpaque(true);
         checkIn_LabelHombres3.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -531,6 +598,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_1.setText("9:00");
         checkIn_LabelHora_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_1.setOpaque(true);
         checkIn_LabelHora_1.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -544,6 +612,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_2.setText("9:30");
         checkIn_LabelHora_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_2.setOpaque(true);
         checkIn_LabelHora_2.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -557,6 +626,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_3.setText("10:00");
         checkIn_LabelHora_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_3.setOpaque(true);
         checkIn_LabelHora_3.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -570,6 +640,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_4.setText("10:30");
         checkIn_LabelHora_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_4.setOpaque(true);
         checkIn_LabelHora_4.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -583,6 +654,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_5.setText("11:00");
         checkIn_LabelHora_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_5.setOpaque(true);
         checkIn_LabelHora_5.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -596,6 +668,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_6.setText("11:30");
         checkIn_LabelHora_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_6.setOpaque(true);
         checkIn_LabelHora_6.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -609,6 +682,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_7.setText("12:00");
         checkIn_LabelHora_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_7.setOpaque(true);
         checkIn_LabelHora_7.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -622,6 +696,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_8.setText("12:30");
         checkIn_LabelHora_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_8.setOpaque(true);
         checkIn_LabelHora_8.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -635,6 +710,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_9.setText("13:00");
         checkIn_LabelHora_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_9.setOpaque(true);
         checkIn_LabelHora_9.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -648,6 +724,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_10.setText("13:30");
         checkIn_LabelHora_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_10.setOpaque(true);
         checkIn_LabelHora_10.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -661,6 +738,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_11.setText("14:00");
         checkIn_LabelHora_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_11.setOpaque(true);
         checkIn_LabelHora_11.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -674,6 +752,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_12.setText("14:30");
         checkIn_LabelHora_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_12.setOpaque(true);
         checkIn_LabelHora_12.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -687,6 +766,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_13.setText("15:00");
         checkIn_LabelHora_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_13.setOpaque(true);
         checkIn_LabelHora_13.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -700,6 +780,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_14.setText("15:30");
         checkIn_LabelHora_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_14.setOpaque(true);
         checkIn_LabelHora_14.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -713,6 +794,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_15.setText("16:00");
         checkIn_LabelHora_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_15.setOpaque(true);
         checkIn_LabelHora_15.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -726,6 +808,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_LabelHora_16.setText("16:30");
         checkIn_LabelHora_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_LabelHora_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_LabelHora_16.setOpaque(true);
         checkIn_LabelHora_16.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -738,6 +821,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_1.setOpaque(true);
         checkIn_BotonM1_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -750,6 +834,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_2.setOpaque(true);
         checkIn_BotonM1_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -762,6 +847,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_3.setOpaque(true);
         checkIn_BotonM1_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -774,6 +860,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_4.setOpaque(true);
         checkIn_BotonM1_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -786,6 +873,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_5.setOpaque(true);
         checkIn_BotonM1_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -798,6 +886,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_6.setOpaque(true);
         checkIn_BotonM1_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -810,6 +899,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_7.setOpaque(true);
         checkIn_BotonM1_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -822,6 +912,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_8.setOpaque(true);
         checkIn_BotonM1_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -834,6 +925,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_9.setOpaque(true);
         checkIn_BotonM1_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -846,6 +938,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_10.setOpaque(true);
         checkIn_BotonM1_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -858,6 +951,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_11.setOpaque(true);
         checkIn_BotonM1_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -870,6 +964,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_12.setOpaque(true);
         checkIn_BotonM1_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -882,6 +977,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_13.setOpaque(true);
         checkIn_BotonM1_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -894,6 +990,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_14.setOpaque(true);
         checkIn_BotonM1_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -906,6 +1003,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_15.setOpaque(true);
         checkIn_BotonM1_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -918,6 +1016,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM1_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM1_16.setOpaque(true);
         checkIn_BotonM1_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -930,6 +1029,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_1.setOpaque(true);
         checkIn_BotonH1_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -942,6 +1042,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_2.setOpaque(true);
         checkIn_BotonH1_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -954,6 +1055,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_3.setOpaque(true);
         checkIn_BotonH1_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -966,6 +1068,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_4.setOpaque(true);
         checkIn_BotonH1_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -978,6 +1081,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_5.setOpaque(true);
         checkIn_BotonH1_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -990,6 +1094,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_6.setOpaque(true);
         checkIn_BotonH1_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -1002,6 +1107,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_7.setOpaque(true);
         checkIn_BotonH1_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -1014,6 +1120,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_8.setOpaque(true);
         checkIn_BotonH1_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -1026,6 +1133,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_9.setOpaque(true);
         checkIn_BotonH1_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -1038,6 +1146,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_10.setOpaque(true);
         checkIn_BotonH1_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -1050,6 +1159,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_11.setOpaque(true);
         checkIn_BotonH1_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -1062,6 +1172,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_12.setOpaque(true);
         checkIn_BotonH1_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -1074,6 +1185,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_13.setOpaque(true);
         checkIn_BotonH1_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -1086,6 +1198,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_14.setOpaque(true);
         checkIn_BotonH1_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -1098,6 +1211,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_15.setOpaque(true);
         checkIn_BotonH1_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -1110,6 +1224,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH1_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH1_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH1_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH1_16.setOpaque(true);
         checkIn_BotonH1_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -1122,6 +1237,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_1.setOpaque(true);
         checkIn_BotonM2_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -1134,6 +1250,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_2.setOpaque(true);
         checkIn_BotonM2_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1146,6 +1263,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_3.setOpaque(true);
         checkIn_BotonM2_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1158,6 +1276,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_4.setOpaque(true);
         checkIn_BotonM2_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1170,6 +1289,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_5.setOpaque(true);
         checkIn_BotonM2_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1182,6 +1302,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_6.setOpaque(true);
         checkIn_BotonM2_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -1194,6 +1315,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_7.setOpaque(true);
         checkIn_BotonM2_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -1206,6 +1328,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_8.setOpaque(true);
         checkIn_BotonM2_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -1218,6 +1341,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_9.setOpaque(true);
         checkIn_BotonM2_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -1230,6 +1354,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_10.setOpaque(true);
         checkIn_BotonM2_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -1242,6 +1367,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_11.setOpaque(true);
         checkIn_BotonM2_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -1254,6 +1380,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_12.setOpaque(true);
         checkIn_BotonM2_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -1266,6 +1393,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_13.setOpaque(true);
         checkIn_BotonM2_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -1278,6 +1406,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_14.setOpaque(true);
         checkIn_BotonM2_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -1290,6 +1419,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_15.setOpaque(true);
         checkIn_BotonM2_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -1302,6 +1432,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM2_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM2_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM2_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM2_16.setOpaque(true);
         checkIn_BotonM2_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -1314,6 +1445,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_1.setOpaque(true);
         checkIn_BotonH2_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -1326,6 +1458,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_2.setOpaque(true);
         checkIn_BotonH2_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1338,6 +1471,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_1.setOpaque(true);
         checkIn_BotonM3_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -1350,6 +1484,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_2.setOpaque(true);
         checkIn_BotonM3_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1362,6 +1497,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_3.setOpaque(true);
         checkIn_BotonH2_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1374,6 +1510,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_4.setOpaque(true);
         checkIn_BotonH2_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1386,6 +1523,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_5.setOpaque(true);
         checkIn_BotonH2_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1398,6 +1536,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_6.setOpaque(true);
         checkIn_BotonH2_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -1410,6 +1549,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_7.setOpaque(true);
         checkIn_BotonH2_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -1422,6 +1562,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_8.setOpaque(true);
         checkIn_BotonH2_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -1434,6 +1575,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_9.setOpaque(true);
         checkIn_BotonH2_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -1446,6 +1588,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_10.setOpaque(true);
         checkIn_BotonH2_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -1458,6 +1601,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_11.setOpaque(true);
         checkIn_BotonH2_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -1470,6 +1614,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_12.setOpaque(true);
         checkIn_BotonH2_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -1482,6 +1627,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_13.setOpaque(true);
         checkIn_BotonH2_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -1494,6 +1640,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_14.setOpaque(true);
         checkIn_BotonH2_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -1506,6 +1653,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_15.setOpaque(true);
         checkIn_BotonH2_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -1518,6 +1666,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH2_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH2_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH2_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH2_16.setOpaque(true);
         checkIn_BotonH2_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -1530,6 +1679,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_3.setOpaque(true);
         checkIn_BotonM3_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1542,6 +1692,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_4.setOpaque(true);
         checkIn_BotonM3_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1554,6 +1705,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_5.setOpaque(true);
         checkIn_BotonM3_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1566,6 +1718,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_6.setOpaque(true);
         checkIn_BotonM3_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -1578,6 +1731,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_7.setOpaque(true);
         checkIn_BotonM3_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -1590,6 +1744,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_8.setOpaque(true);
         checkIn_BotonM3_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -1602,6 +1757,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_9.setOpaque(true);
         checkIn_BotonM3_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -1614,6 +1770,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_10.setOpaque(true);
         checkIn_BotonM3_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -1626,6 +1783,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_11.setOpaque(true);
         checkIn_BotonM3_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -1638,6 +1796,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_12.setOpaque(true);
         checkIn_BotonM3_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -1650,6 +1809,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_13.setOpaque(true);
         checkIn_BotonM3_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -1662,6 +1822,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_14.setOpaque(true);
         checkIn_BotonM3_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -1674,6 +1835,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_15.setOpaque(true);
         checkIn_BotonM3_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -1686,6 +1848,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM3_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM3_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonM3_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonM3_16.setOpaque(true);
         checkIn_BotonM3_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -1698,6 +1861,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_1.setOpaque(true);
         checkIn_BotonH3_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -1710,6 +1874,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_2.setOpaque(true);
         checkIn_BotonH3_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -1722,6 +1887,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_3.setOpaque(true);
         checkIn_BotonH3_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -1734,6 +1900,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_4.setOpaque(true);
         checkIn_BotonH3_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -1746,6 +1913,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_5.setOpaque(true);
         checkIn_BotonH3_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -1758,6 +1926,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_6.setOpaque(true);
         checkIn_BotonH3_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -1770,6 +1939,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_7.setOpaque(true);
         checkIn_BotonH3_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -1782,6 +1952,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_8.setOpaque(true);
         checkIn_BotonH3_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -1794,6 +1965,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_9.setOpaque(true);
         checkIn_BotonH3_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -1806,6 +1978,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_10.setOpaque(true);
         checkIn_BotonH3_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -1818,6 +1991,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_11.setOpaque(true);
         checkIn_BotonH3_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -1830,6 +2004,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_12.setOpaque(true);
         checkIn_BotonH3_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -1842,6 +2017,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_13.setOpaque(true);
         checkIn_BotonH3_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -1854,6 +2030,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_14.setOpaque(true);
         checkIn_BotonH3_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -1866,6 +2043,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_15.setOpaque(true);
         checkIn_BotonH3_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -1878,6 +2056,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonH3_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkIn_BotonH3_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkIn_BotonH3_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkIn_BotonH3_16.setOpaque(true);
         checkIn_BotonH3_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -1897,6 +2076,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelAla.setText("Ala");
         checkOut_LabelAla.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelAla.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelAla.setOpaque(true);
         checkOut_LabelAla.setPreferredSize(new java.awt.Dimension(180, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1910,6 +2090,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelMujeres1.setText("Mujeres 1");
         checkOut_LabelMujeres1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelMujeres1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelMujeres1.setOpaque(true);
         checkOut_LabelMujeres1.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1923,6 +2104,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHombres1.setText("Hombres 1");
         checkOut_LabelHombres1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHombres1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHombres1.setOpaque(true);
         checkOut_LabelHombres1.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1936,6 +2118,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelMujeres2.setText("Mujeres 2");
         checkOut_LabelMujeres2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelMujeres2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelMujeres2.setOpaque(true);
         checkOut_LabelMujeres2.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1949,6 +2132,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHombres2.setText("Hombres 2");
         checkOut_LabelHombres2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHombres2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHombres2.setOpaque(true);
         checkOut_LabelHombres2.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1962,6 +2146,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelMujeres3.setText("Mujeres 3");
         checkOut_LabelMujeres3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelMujeres3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelMujeres3.setOpaque(true);
         checkOut_LabelMujeres3.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1975,6 +2160,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHombres3.setText("Hombres 3");
         checkOut_LabelHombres3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHombres3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHombres3.setOpaque(true);
         checkOut_LabelHombres3.setPreferredSize(new java.awt.Dimension(180, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 0;
@@ -1988,6 +2174,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_1.setText("9:00");
         checkOut_LabelHora_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_1.setOpaque(true);
         checkOut_LabelHora_1.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -2001,6 +2188,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_2.setText("9:30");
         checkOut_LabelHora_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_2.setOpaque(true);
         checkOut_LabelHora_2.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -2014,6 +2202,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_3.setText("10:00");
         checkOut_LabelHora_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_3.setOpaque(true);
         checkOut_LabelHora_3.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -2027,6 +2216,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_4.setText("10:30");
         checkOut_LabelHora_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_4.setOpaque(true);
         checkOut_LabelHora_4.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -2040,6 +2230,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_5.setText("11:00");
         checkOut_LabelHora_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_5.setOpaque(true);
         checkOut_LabelHora_5.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -2053,6 +2244,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_6.setText("11:30");
         checkOut_LabelHora_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_6.setOpaque(true);
         checkOut_LabelHora_6.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -2066,6 +2258,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_7.setText("12:00");
         checkOut_LabelHora_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_7.setOpaque(true);
         checkOut_LabelHora_7.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -2079,6 +2272,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_8.setText("12:30");
         checkOut_LabelHora_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_8.setOpaque(true);
         checkOut_LabelHora_8.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -2092,6 +2286,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_9.setText("13:00");
         checkOut_LabelHora_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_9.setOpaque(true);
         checkOut_LabelHora_9.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -2105,6 +2300,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_10.setText("13:30");
         checkOut_LabelHora_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_10.setOpaque(true);
         checkOut_LabelHora_10.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -2118,6 +2314,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_11.setText("14:00");
         checkOut_LabelHora_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_11.setOpaque(true);
         checkOut_LabelHora_11.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -2131,6 +2328,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_12.setText("14:30");
         checkOut_LabelHora_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_12.setOpaque(true);
         checkOut_LabelHora_12.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -2144,6 +2342,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_13.setText("15:00");
         checkOut_LabelHora_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_13.setOpaque(true);
         checkOut_LabelHora_13.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -2157,6 +2356,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_14.setText("15:30");
         checkOut_LabelHora_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_14.setOpaque(true);
         checkOut_LabelHora_14.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -2170,6 +2370,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_15.setText("16:00");
         checkOut_LabelHora_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_15.setOpaque(true);
         checkOut_LabelHora_15.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -2183,6 +2384,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_LabelHora_16.setText("16:30");
         checkOut_LabelHora_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_LabelHora_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_LabelHora_16.setOpaque(true);
         checkOut_LabelHora_16.setPreferredSize(new java.awt.Dimension(74, 60));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -2195,6 +2397,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_1.setOpaque(true);
         checkOut_BotonM1_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -2207,6 +2410,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_2.setOpaque(true);
         checkOut_BotonM1_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -2219,6 +2423,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_3.setOpaque(true);
         checkOut_BotonM1_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -2231,6 +2436,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_4.setOpaque(true);
         checkOut_BotonM1_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -2243,6 +2449,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_5.setOpaque(true);
         checkOut_BotonM1_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -2255,6 +2462,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_6.setOpaque(true);
         checkOut_BotonM1_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -2267,6 +2475,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_7.setOpaque(true);
         checkOut_BotonM1_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -2279,6 +2488,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_8.setOpaque(true);
         checkOut_BotonM1_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -2291,6 +2501,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_9.setOpaque(true);
         checkOut_BotonM1_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -2303,6 +2514,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_10.setOpaque(true);
         checkOut_BotonM1_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -2315,6 +2527,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_11.setOpaque(true);
         checkOut_BotonM1_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -2327,6 +2540,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_12.setOpaque(true);
         checkOut_BotonM1_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -2339,6 +2553,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_13.setOpaque(true);
         checkOut_BotonM1_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -2351,6 +2566,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_BotonM1_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_BotonM1_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_BotonM1_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_BotonM1_14.setOpaque(true);
         checkOut_BotonM1_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -2363,6 +2579,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM1_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM1_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM1_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM1_15.setOpaque(true);
         checkOut_Domingo_BotonM1_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -2375,6 +2592,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM1_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM1_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM1_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM1_16.setOpaque(true);
         checkOut_Domingo_BotonM1_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -2387,6 +2605,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_1.setOpaque(true);
         checkOut_Domingo_BotonH1_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -2399,6 +2618,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_2.setOpaque(true);
         checkOut_Domingo_BotonH1_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -2411,6 +2631,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_3.setOpaque(true);
         checkOut_Domingo_BotonH1_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -2423,6 +2644,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_4.setOpaque(true);
         checkOut_Domingo_BotonH1_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -2435,6 +2657,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_5.setOpaque(true);
         checkOut_Domingo_BotonH1_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -2447,6 +2670,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_6.setOpaque(true);
         checkOut_Domingo_BotonH1_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -2459,6 +2683,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_7.setOpaque(true);
         checkOut_Domingo_BotonH1_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -2471,6 +2696,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_8.setOpaque(true);
         checkOut_Domingo_BotonH1_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -2483,6 +2709,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_9.setOpaque(true);
         checkOut_Domingo_BotonH1_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -2495,6 +2722,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_10.setOpaque(true);
         checkOut_Domingo_BotonH1_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -2507,6 +2735,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_11.setOpaque(true);
         checkOut_Domingo_BotonH1_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -2519,6 +2748,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_12.setOpaque(true);
         checkOut_Domingo_BotonH1_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -2531,6 +2761,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_13.setOpaque(true);
         checkOut_Domingo_BotonH1_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -2543,6 +2774,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_14.setOpaque(true);
         checkOut_Domingo_BotonH1_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -2555,6 +2787,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_15.setOpaque(true);
         checkOut_Domingo_BotonH1_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -2567,6 +2800,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH1_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH1_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH1_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH1_16.setOpaque(true);
         checkOut_Domingo_BotonH1_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -2579,6 +2813,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_1.setOpaque(true);
         checkOut_Domingo_BotonM2_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -2591,6 +2826,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_2.setOpaque(true);
         checkOut_Domingo_BotonM2_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -2603,6 +2839,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_3.setOpaque(true);
         checkOut_Domingo_BotonM2_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -2615,6 +2852,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_4.setOpaque(true);
         checkOut_Domingo_BotonM2_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -2627,6 +2865,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_5.setOpaque(true);
         checkOut_Domingo_BotonM2_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -2639,6 +2878,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_6.setOpaque(true);
         checkOut_Domingo_BotonM2_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -2651,6 +2891,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_7.setOpaque(true);
         checkOut_Domingo_BotonM2_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -2663,6 +2904,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_8.setOpaque(true);
         checkOut_Domingo_BotonM2_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -2675,6 +2917,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_9.setOpaque(true);
         checkOut_Domingo_BotonM2_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -2687,6 +2930,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_10.setOpaque(true);
         checkOut_Domingo_BotonM2_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -2699,6 +2943,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_11.setOpaque(true);
         checkOut_Domingo_BotonM2_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -2711,6 +2956,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_12.setOpaque(true);
         checkOut_Domingo_BotonM2_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -2723,6 +2969,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_13.setOpaque(true);
         checkOut_Domingo_BotonM2_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -2735,6 +2982,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_14.setOpaque(true);
         checkOut_Domingo_BotonM2_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -2747,6 +2995,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_15.setOpaque(true);
         checkOut_Domingo_BotonM2_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -2759,6 +3008,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM2_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM2_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM2_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM2_16.setOpaque(true);
         checkOut_Domingo_BotonM2_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -2771,6 +3021,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_1.setOpaque(true);
         checkOut_Domingo_BotonH2_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -2783,6 +3034,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_2.setOpaque(true);
         checkOut_Domingo_BotonH2_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -2795,6 +3047,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_3.setOpaque(true);
         checkOut_Domingo_BotonH2_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -2807,6 +3060,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_4.setOpaque(true);
         checkOut_Domingo_BotonH2_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -2819,6 +3073,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_5.setOpaque(true);
         checkOut_Domingo_BotonH2_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -2831,6 +3086,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_6.setOpaque(true);
         checkOut_Domingo_BotonH2_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -2843,6 +3099,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_7.setOpaque(true);
         checkOut_Domingo_BotonH2_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -2855,6 +3112,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_8.setOpaque(true);
         checkOut_Domingo_BotonH2_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -2867,6 +3125,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_9.setOpaque(true);
         checkOut_Domingo_BotonH2_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -2879,6 +3138,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_10.setOpaque(true);
         checkOut_Domingo_BotonH2_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -2891,6 +3151,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_11.setOpaque(true);
         checkOut_Domingo_BotonH2_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -2903,6 +3164,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_12.setOpaque(true);
         checkOut_Domingo_BotonH2_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -2915,6 +3177,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_13.setOpaque(true);
         checkOut_Domingo_BotonH2_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -2927,6 +3190,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_14.setOpaque(true);
         checkOut_Domingo_BotonH2_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -2939,6 +3203,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_15.setOpaque(true);
         checkOut_Domingo_BotonH2_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -2951,6 +3216,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH2_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH2_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH2_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH2_16.setOpaque(true);
         checkOut_Domingo_BotonH2_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -2963,6 +3229,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_1.setOpaque(true);
         checkOut_Domingo_BotonM3_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -2975,6 +3242,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_2.setOpaque(true);
         checkOut_Domingo_BotonM3_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -2987,6 +3255,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_3.setOpaque(true);
         checkOut_Domingo_BotonM3_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -2999,6 +3268,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_4.setOpaque(true);
         checkOut_Domingo_BotonM3_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -3011,6 +3281,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_5.setOpaque(true);
         checkOut_Domingo_BotonM3_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -3023,6 +3294,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_6.setOpaque(true);
         checkOut_Domingo_BotonM3_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -3035,6 +3307,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_7.setOpaque(true);
         checkOut_Domingo_BotonM3_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -3047,6 +3320,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_8.setOpaque(true);
         checkOut_Domingo_BotonM3_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -3059,6 +3333,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_9.setOpaque(true);
         checkOut_Domingo_BotonM3_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -3071,6 +3346,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_10.setOpaque(true);
         checkOut_Domingo_BotonM3_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -3083,6 +3359,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_11.setOpaque(true);
         checkOut_Domingo_BotonM3_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -3095,6 +3372,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_12.setOpaque(true);
         checkOut_Domingo_BotonM3_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -3107,6 +3385,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_13.setOpaque(true);
         checkOut_Domingo_BotonM3_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -3119,6 +3398,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_14.setOpaque(true);
         checkOut_Domingo_BotonM3_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -3131,6 +3411,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_15.setOpaque(true);
         checkOut_Domingo_BotonM3_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -3143,6 +3424,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonM3_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonM3_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonM3_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonM3_16.setOpaque(true);
         checkOut_Domingo_BotonM3_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -3155,6 +3437,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_1.setOpaque(true);
         checkOut_Domingo_BotonH3_1.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
@@ -3167,6 +3450,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_2.setOpaque(true);
         checkOut_Domingo_BotonH3_2.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
@@ -3179,6 +3463,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_3.setOpaque(true);
         checkOut_Domingo_BotonH3_3.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
@@ -3191,6 +3476,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_4.setOpaque(true);
         checkOut_Domingo_BotonH3_4.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
@@ -3203,6 +3489,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_5.setOpaque(true);
         checkOut_Domingo_BotonH3_5.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
@@ -3215,6 +3502,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_6.setOpaque(true);
         checkOut_Domingo_BotonH3_6.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
@@ -3227,6 +3515,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_7.setOpaque(true);
         checkOut_Domingo_BotonH3_7.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
@@ -3239,6 +3528,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_8.setOpaque(true);
         checkOut_Domingo_BotonH3_8.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
@@ -3251,6 +3541,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_9.setOpaque(true);
         checkOut_Domingo_BotonH3_9.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
@@ -3263,6 +3554,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_10.setOpaque(true);
         checkOut_Domingo_BotonH3_10.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
@@ -3275,6 +3567,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_11.setOpaque(true);
         checkOut_Domingo_BotonH3_11.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
@@ -3287,6 +3580,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_12.setOpaque(true);
         checkOut_Domingo_BotonH3_12.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
@@ -3299,6 +3593,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_13.setOpaque(true);
         checkOut_Domingo_BotonH3_13.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
@@ -3311,6 +3606,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_14.setOpaque(true);
         checkOut_Domingo_BotonH3_14.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
@@ -3323,6 +3619,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_15.setOpaque(true);
         checkOut_Domingo_BotonH3_15.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
@@ -3335,6 +3632,7 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         checkOut_Domingo_BotonH3_16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         checkOut_Domingo_BotonH3_16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(191, 191, 191)));
         checkOut_Domingo_BotonH3_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        checkOut_Domingo_BotonH3_16.setOpaque(true);
         checkOut_Domingo_BotonH3_16.setPreferredSize(new java.awt.Dimension(74, 83));
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
@@ -3373,11 +3671,11 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -3399,6 +3697,64 @@ public class pantallaPrincipal extends javax.swing.JFrame {
         validaTableroDia();
     }//GEN-LAST:event_botonDiaMouseClicked
 
+    private void labelEventoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelEventoMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_labelEventoMouseMoved
+
+    private void labelEventoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelEventoMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_labelEventoMouseExited
+
+    private void botonEventoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonEventoMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_botonEventoMouseMoved
+
+    private void botonEventoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonEventoMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_botonEventoMouseExited
+
+    private void diaLabelMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_diaLabelMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_diaLabelMouseMoved
+
+    private void diaLabelMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_diaLabelMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_diaLabelMouseExited
+
+    private void botonDiaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonDiaMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_botonDiaMouseMoved
+
+    private void botonDiaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonDiaMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_botonDiaMouseExited
+
+    private void botonImprimirMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonImprimirMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_botonImprimirMouseMoved
+
+    private void botonImprimirMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonImprimirMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_botonImprimirMouseExited
+
+    private void botonNuevaCitaMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonNuevaCitaMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_botonNuevaCitaMouseMoved
+
+    private void botonNuevaCitaMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonNuevaCitaMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_botonNuevaCitaMouseExited
+
+    private void botonNuevaCitaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonNuevaCitaMouseClicked
+        AgregarCita agregarCita = new AgregarCita();
+        agregarCita.setVisible(true);
+    }//GEN-LAST:event_botonNuevaCitaMouseClicked
+
+    private void botonImprimirMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonImprimirMouseClicked
+        ImprimirCitas imprimirCitas = new ImprimirCitas();
+        imprimirCitas.setVisible(true);
+    }//GEN-LAST:event_botonImprimirMouseClicked
+
     /**
      * @param args the command line arguments
      */
@@ -3416,20 +3772,20 @@ public class pantallaPrincipal extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(pantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(pantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(pantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(pantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new pantallaPrincipal().setVisible(true);
+                new PantallaPrincipal().setVisible(true);
             }
         });
     }
