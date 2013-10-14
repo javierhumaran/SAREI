@@ -3862,7 +3862,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private void checkIn_BotonM1_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_1MouseClicked
         
         if (evt.getClickCount() == 2) {
-        ConsultarCita consultarCita = new ConsultarCita();
+//        ConsultarCita consultarCita = new ConsultarCita();
         consultarCita.setVisible(true);
         }
         
