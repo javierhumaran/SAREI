@@ -19,7 +19,7 @@ import javax.swing.JPanel;
 public class PantallaPrincipal extends javax.swing.JFrame {
 
     private CardLayout cardLayout = new CardLayout();
-    ImageIcon citaAzul_1 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaAzul_1.png"); 
+    ImageIcon citaAzul_1 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaAzul_1.png");
     ImageIcon citaAzul_2 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaAzul_2.png");
     ImageIcon citaAzulFuerte_1 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaAzulFuerte_1.png");
     ImageIcon citaAzulFuerte_2 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaAzulFuerte_2.png");
@@ -31,7 +31,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     ImageIcon citaRojo_2 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaRojo_2.png");
     ImageIcon citaVerde_1 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaVerde_1.png");
     ImageIcon citaVerde_2 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaVerde_2.png");
-    
+
     /**
      * Creates new form NewJFrame
      */
@@ -42,32 +42,131 @@ public class PantallaPrincipal extends javax.swing.JFrame {
 
         contentPanel.add(checkInPanel, "checkIn");
         contentPanel.add(checkOutPanel, "checkOut");
-        
-        if(labelEvento.getText().equalsIgnoreCase("Check-In")){
+
+        if (labelEvento.getText().equalsIgnoreCase("Check-In")) {
             cardLayout.show(contentPanel, "checkIn");
-        } else if(labelEvento.getText().equalsIgnoreCase("Check-Out")){
+        } else if (labelEvento.getText().equalsIgnoreCase("Check-Out")) {
             cardLayout.show(contentPanel, "checkOut");
         }
     }
-    
-    public void validaTableroEvento(){
-       if(labelEvento.getText().equalsIgnoreCase("Check-In")){
-           labelEvento.setText("Check-Out");
-           cardLayout.show(contentPanel, "checkOut");
-       } else if(labelEvento.getText().equalsIgnoreCase("Check-Out")){
-           labelEvento.setText("Check-In");
-           cardLayout.show(contentPanel, "checkIn");
-       } 
-    }
-    
-    public void validaTableroDia(){
-        if(diaLabel.getText().equalsIgnoreCase("Sabado")){
-            diaLabel.setText("Domingo");
-        } else if(diaLabel.getText().equalsIgnoreCase("Domingo")){
-            diaLabel.setText("Sabado");
+
+    public void validaTableroEvento() {
+        if (labelEvento.getText().equalsIgnoreCase("Check-In")) {
+            labelEvento.setText("Check-Out");
+            
+            if(diaLabel.getText().equals("Sabado")){
+                changeHourCheckOutSabado();
+            }else{changeHourCheckOutDomingo();}
+            
+            cardLayout.show(contentPanel, "checkOut");
+        } else if (labelEvento.getText().equalsIgnoreCase("Check-Out")) {
+            labelEvento.setText("Check-In");
+            if(diaLabel.getText().equals("Sabado")){
+                changeHourCheckInSabado();
+            }
+            
+            cardLayout.show(contentPanel, "checkIn");
         }
     }
-    
+
+    public void validaTableroDia() {
+        if (diaLabel.getText().equalsIgnoreCase("Sabado")) {
+            diaLabel.setText("Domingo");
+            if(labelEvento.getText().equals("Check-In")){
+                changeHourCheckInDomingo();
+            }else{
+                changeHourCheckOutDomingo();
+            }
+
+
+        } else if (diaLabel.getText().equalsIgnoreCase("Domingo")) {
+            diaLabel.setText("Sabado");
+            if(labelEvento.getText().equals("Check-In")){
+                changeHourCheckInSabado();
+            }else{
+                changeHourCheckOutSabado();
+            }
+
+        }
+    }
+
+    public void changeHourCheckInSabado() {
+        checkIn_LabelHora_1.setText("9:00");
+        checkIn_LabelHora_2.setText("9:30");
+        checkIn_LabelHora_3.setText("10:00");
+        checkIn_LabelHora_4.setText("10:30");
+        checkIn_LabelHora_5.setText("11:00");
+        checkIn_LabelHora_6.setText("11:30");
+        checkIn_LabelHora_7.setText("12:00");
+        checkIn_LabelHora_8.setText("12:30");
+        checkIn_LabelHora_9.setText("13:00");
+        checkIn_LabelHora_10.setText("13:30");
+        checkIn_LabelHora_11.setText("14:00");
+        checkIn_LabelHora_12.setText("14:30");
+        checkIn_LabelHora_13.setText("15:00");
+        checkIn_LabelHora_14.setText("15:30");
+        checkIn_LabelHora_15.setText("16:00");
+        checkIn_LabelHora_16.setText("16:30");
+
+    }
+    public void changeHourCheckInDomingo() {
+
+        checkIn_LabelHora_1.setText("10:00");
+        checkIn_LabelHora_2.setText("10:30");
+        checkIn_LabelHora_3.setText("11:00");
+        checkIn_LabelHora_4.setText("11:30");
+        checkIn_LabelHora_5.setText("12:00");
+        checkIn_LabelHora_6.setText("12:30");
+        checkIn_LabelHora_7.setText("13:00");
+        checkIn_LabelHora_8.setText("13:30");
+        checkIn_LabelHora_9.setText("14:00");
+        checkIn_LabelHora_10.setText("14:30");
+        checkIn_LabelHora_11.setText("15:00");
+        checkIn_LabelHora_12.setText("15:30");
+        checkIn_LabelHora_13.setText("16:00");
+        checkIn_LabelHora_14.setText("16:30");
+        checkIn_LabelHora_15.setText("17:00");
+        checkIn_LabelHora_16.setText("17:30");
+
+    }
+
+    public void changeHourCheckOutSabado() {
+        checkOut_LabelHora_1.setText("9:00");
+        checkOut_LabelHora_2.setText("9:30");
+        checkOut_LabelHora_3.setText("10:00");
+        checkOut_LabelHora_4.setText("10:30");
+        checkOut_LabelHora_5.setText("11:00");
+        checkOut_LabelHora_6.setText("11:30");
+        checkOut_LabelHora_7.setText("12:00");
+        checkOut_LabelHora_8.setText("12:30");
+        checkOut_LabelHora_9.setText("13:00");
+        checkOut_LabelHora_10.setText("13:30");
+        checkOut_LabelHora_11.setText("14:00");
+        checkOut_LabelHora_12.setText("14:30");
+        checkOut_LabelHora_13.setText("15:00");
+        checkOut_LabelHora_14.setText("15:30");
+        checkOut_LabelHora_15.setText("16:00");
+        checkOut_LabelHora_16.setText("16:30");
+    }
+    public void changeHourCheckOutDomingo() {
+        checkOut_LabelHora_1.setText("10:00");
+        checkOut_LabelHora_2.setText("10:30");
+        checkOut_LabelHora_3.setText("11:00");
+        checkOut_LabelHora_4.setText("11:30");
+        checkOut_LabelHora_5.setText("12:00");
+        checkOut_LabelHora_6.setText("12:30");
+        checkOut_LabelHora_7.setText("13:00");
+        checkOut_LabelHora_8.setText("13:30");
+        checkOut_LabelHora_9.setText("14:00");
+        checkOut_LabelHora_10.setText("14:30");
+        checkOut_LabelHora_11.setText("15:00");
+        checkOut_LabelHora_12.setText("15:30");
+        checkOut_LabelHora_13.setText("16:00");
+        checkOut_LabelHora_14.setText("16:30");
+        checkOut_LabelHora_15.setText("17:00");
+        checkOut_LabelHora_16.setText("17:30");
+    }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -823,6 +922,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_1.setOpaque(true);
         checkIn_BotonM1_1.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_1MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 1;
         gridBagConstraints.gridy = 2;
@@ -3653,7 +3757,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
                 .addComponent(diaLabel)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(botonDia)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         containerPanelLayout.setVerticalGroup(
             containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -3755,40 +3859,16 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         imprimirCitas.setVisible(true);
     }//GEN-LAST:event_botonImprimirMouseClicked
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+    private void checkIn_BotonM1_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_1MouseClicked
+        
+        if (evt.getClickCount() == 2) {
+        AgregarCita agregarCita = new AgregarCita();
+        agregarCita.setVisible(true);
         }
-        //</editor-fold>
+        
+    }//GEN-LAST:event_checkIn_BotonM1_1MouseClicked
 
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new PantallaPrincipal().setVisible(true);
-            }
-        });
-    }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel botonDia;
     private javax.swing.JLabel botonEvento;
@@ -4042,5 +4122,40 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     private javax.swing.JLabel iconoCalendar;
     private javax.swing.JLabel labelEvento;
     // End of variables declaration//GEN-END:variables
-}
 
+        /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(PantallaPrincipal.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new PantallaPrincipal().setVisible(true);
+            }
+        });
+    }
+
+}

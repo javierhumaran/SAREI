@@ -77,7 +77,6 @@ public class AgregarCita extends javax.swing.JFrame {
         panelCita.add(botonBuscar);
         botonBuscar.setBounds(560, 0, 40, 50);
 
-        campoTextoBusqueda.setBackground(new java.awt.Color(255, 255, 255));
         campoTextoBusqueda.setFont(new java.awt.Font("Roboto Cn", 0, 20)); // NOI18N
         campoTextoBusqueda.setForeground(new java.awt.Color(204, 204, 204));
         campoTextoBusqueda.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -91,7 +90,7 @@ public class AgregarCita extends javax.swing.JFrame {
         labelHora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelHora.setText("10:00");
         panelCita.add(labelHora);
-        labelHora.setBounds(115, 200, 80, 38);
+        labelHora.setBounds(95, 200, 100, 42);
 
         labelNumeroHabitacion.setFont(new java.awt.Font("Roboto Cn", 0, 88)); // NOI18N
         labelNumeroHabitacion.setForeground(new java.awt.Color(153, 204, 0));
@@ -105,27 +104,45 @@ public class AgregarCita extends javax.swing.JFrame {
         labelHabitacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelHabitacion.setText("Habitacion");
         panelCita.add(labelHabitacion);
-        labelHabitacion.setBounds(70, 60, 170, 38);
+        labelHabitacion.setBounds(70, 60, 170, 42);
 
         botonScrollDown.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/scrollerDown.png"))); // NOI18N
         botonScrollDown.setToolTipText("");
+        botonScrollDown.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonScrollDownMouseClicked(evt);
+            }
+        });
+        botonScrollDown.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                botonScrollDownKeyPressed(evt);
+            }
+        });
         panelCita.add(botonScrollDown);
-        botonScrollDown.setBounds(200, 222, 10, 10);
+        botonScrollDown.setBounds(200, 222, 8, 20);
 
         botonScrollUp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/scrollerUp.png"))); // NOI18N
         botonScrollUp.setToolTipText("");
+        botonScrollUp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonScrollUpMouseClicked(evt);
+            }
+        });
+        botonScrollUp.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                botonScrollUpKeyPressed(evt);
+            }
+        });
         panelCita.add(botonScrollUp);
         botonScrollUp.setBounds(200, 208, 10, 10);
 
         labelLineaVerticalChica.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
-        labelLineaVerticalChica.setForeground(new java.awt.Color(0, 0, 0));
         labelLineaVerticalChica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelLineaVerticalChica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/lineaVertical.png"))); // NOI18N
         panelCita.add(labelLineaVerticalChica);
         labelLineaVerticalChica.setBounds(150, 260, 20, 30);
 
         botonListo.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
-        botonListo.setForeground(new java.awt.Color(0, 0, 0));
         botonListo.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         botonListo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/botonAceptar.png"))); // NOI18N
         botonListo.setText("Listo");
@@ -146,7 +163,6 @@ public class AgregarCita extends javax.swing.JFrame {
         botonListo.setBounds(10, 260, 140, 32);
 
         botonCancelar.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
-        botonCancelar.setForeground(new java.awt.Color(0, 0, 0));
         botonCancelar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         botonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/botonCancelar.png"))); // NOI18N
         botonCancelar.setText("Cancelar");
@@ -202,8 +218,8 @@ public class AgregarCita extends javax.swing.JFrame {
             .addComponent(contentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        setSize(new java.awt.Dimension(598, 297));
-        setLocationRelativeTo(null);
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-598)/2, (screenSize.height-297)/2, 598, 297);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCancelarMouseClicked
@@ -231,6 +247,30 @@ public class AgregarCita extends javax.swing.JFrame {
     private void botonCancelarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCancelarMouseExited
         setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
     }//GEN-LAST:event_botonCancelarMouseExited
+
+    private void botonScrollUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_botonScrollUpKeyPressed
+
+        
+        
+    }//GEN-LAST:event_botonScrollUpKeyPressed
+
+    private void botonScrollDownKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_botonScrollDownKeyPressed
+       
+
+        
+    }//GEN-LAST:event_botonScrollDownKeyPressed
+
+    private void botonScrollDownMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonScrollDownMouseClicked
+       
+        System.out.println("Holis abajo");
+        
+    }//GEN-LAST:event_botonScrollDownMouseClicked
+
+    private void botonScrollUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonScrollUpMouseClicked
+        
+        System.out.println("holis arriba");
+        
+    }//GEN-LAST:event_botonScrollUpMouseClicked
 
     /**
      * @param args the command line arguments
