@@ -77,6 +77,7 @@ public class AgregarCita extends javax.swing.JFrame {
         panelCita.add(botonBuscar);
         botonBuscar.setBounds(560, 0, 40, 50);
 
+        campoTextoBusqueda.setBackground(new java.awt.Color(255, 255, 255));
         campoTextoBusqueda.setFont(new java.awt.Font("Roboto Cn", 0, 20)); // NOI18N
         campoTextoBusqueda.setForeground(new java.awt.Color(204, 204, 204));
         campoTextoBusqueda.setHorizontalAlignment(javax.swing.JTextField.LEFT);
@@ -90,7 +91,7 @@ public class AgregarCita extends javax.swing.JFrame {
         labelHora.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelHora.setText("10:00");
         panelCita.add(labelHora);
-        labelHora.setBounds(95, 200, 100, 42);
+        labelHora.setBounds(95, 200, 100, 38);
 
         labelNumeroHabitacion.setFont(new java.awt.Font("Roboto Cn", 0, 88)); // NOI18N
         labelNumeroHabitacion.setForeground(new java.awt.Color(153, 204, 0));
@@ -104,37 +105,17 @@ public class AgregarCita extends javax.swing.JFrame {
         labelHabitacion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         labelHabitacion.setText("Habitacion");
         panelCita.add(labelHabitacion);
-        labelHabitacion.setBounds(70, 60, 170, 42);
+        labelHabitacion.setBounds(70, 60, 170, 38);
 
         botonScrollDown.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/scrollerDown.png"))); // NOI18N
         botonScrollDown.setToolTipText("");
-        botonScrollDown.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonScrollDownMouseClicked(evt);
-            }
-        });
-        botonScrollDown.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                botonScrollDownKeyPressed(evt);
-            }
-        });
         panelCita.add(botonScrollDown);
-        botonScrollDown.setBounds(200, 222, 8, 20);
+        botonScrollDown.setBounds(190, 216, 8, 20);
 
         botonScrollUp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/scrollerUp.png"))); // NOI18N
         botonScrollUp.setToolTipText("");
-        botonScrollUp.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonScrollUpMouseClicked(evt);
-            }
-        });
-        botonScrollUp.addKeyListener(new java.awt.event.KeyAdapter() {
-            public void keyPressed(java.awt.event.KeyEvent evt) {
-                botonScrollUpKeyPressed(evt);
-            }
-        });
         panelCita.add(botonScrollUp);
-        botonScrollUp.setBounds(200, 208, 10, 10);
+        botonScrollUp.setBounds(190, 210, 10, 10);
 
         labelLineaVerticalChica.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
         labelLineaVerticalChica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -143,15 +124,16 @@ public class AgregarCita extends javax.swing.JFrame {
         labelLineaVerticalChica.setBounds(150, 260, 20, 30);
 
         botonListo.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
+        botonListo.setForeground(new java.awt.Color(51, 51, 51));
         botonListo.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         botonListo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/botonAceptar.png"))); // NOI18N
         botonListo.setText("Listo");
         botonListo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonListoMouseClicked(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 botonListoMouseExited(evt);
+            }
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonListoMouseClicked(evt);
             }
         });
         botonListo.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -163,15 +145,16 @@ public class AgregarCita extends javax.swing.JFrame {
         botonListo.setBounds(10, 260, 140, 32);
 
         botonCancelar.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
+        botonCancelar.setForeground(new java.awt.Color(0, 0, 0));
         botonCancelar.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         botonCancelar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/botonCancelar.png"))); // NOI18N
         botonCancelar.setText("Cancelar");
         botonCancelar.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonCancelarMouseClicked(evt);
-            }
             public void mouseExited(java.awt.event.MouseEvent evt) {
                 botonCancelarMouseExited(evt);
+            }
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCancelarMouseClicked(evt);
             }
         });
         botonCancelar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -218,8 +201,8 @@ public class AgregarCita extends javax.swing.JFrame {
             .addComponent(contentPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-598)/2, (screenSize.height-297)/2, 598, 297);
+        setSize(new java.awt.Dimension(598, 297));
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void botonCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCancelarMouseClicked
@@ -228,8 +211,8 @@ public class AgregarCita extends javax.swing.JFrame {
     }//GEN-LAST:event_botonCancelarMouseClicked
 
     private void botonListoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonListoMouseClicked
-        panelTransparente.dispose();
-        dispose();
+        ConfirmarCita confirmarCita = new ConfirmarCita();
+        confirmarCita.setVisible(true);
     }//GEN-LAST:event_botonListoMouseClicked
 
     private void botonListoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonListoMouseMoved
@@ -248,64 +231,6 @@ public class AgregarCita extends javax.swing.JFrame {
         setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
     }//GEN-LAST:event_botonCancelarMouseExited
 
-    private void botonScrollUpKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_botonScrollUpKeyPressed
-
-        
-        
-    }//GEN-LAST:event_botonScrollUpKeyPressed
-
-    private void botonScrollDownKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_botonScrollDownKeyPressed
-       
-
-        
-    }//GEN-LAST:event_botonScrollDownKeyPressed
-
-    private void botonScrollDownMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonScrollDownMouseClicked
-       
-        System.out.println("Holis abajo");
-        
-    }//GEN-LAST:event_botonScrollDownMouseClicked
-
-    private void botonScrollUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonScrollUpMouseClicked
-        
-        System.out.println("holis arriba");
-        
-    }//GEN-LAST:event_botonScrollUpMouseClicked
-
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(AgregarCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(AgregarCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(AgregarCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(AgregarCita.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new AgregarCita().setVisible(true);
-            }
-        });
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel botonBuscar;
     private javax.swing.JLabel botonCancelar;

@@ -32,6 +32,7 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     ImageIcon citaVerde_1 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaVerde_1.png");
     ImageIcon citaVerde_2 = new ImageIcon("C:\\Users\\JHumaran\\Documents\\GitHub\\SAREI\\SAREI.Presentacion\\src\\administrarAgenda\\img/citaVerde_2.png");
 
+    
     /**
      * Creates new form NewJFrame
      */
@@ -3935,88 +3936,115 @@ public class PantallaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_botonImprimirMouseClicked
 
     private void checkIn_BotonM1_1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_1MouseClicked
-        
         if (evt.getClickCount() == 2) {
-//        ConsultarCita consultarCita = new ConsultarCita();
+        ConsultarCita consultarCita = new ConsultarCita();
         consultarCita.setVisible(true);
-        }
-        
+        }       
     }//GEN-LAST:event_checkIn_BotonM1_1MouseClicked
 
     private void checkIn_BotonM1_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_2MouseClicked
-        
         if (evt.getClickCount() == 2) {
-        AgregarCita agregarCita = new AgregarCita();
-        agregarCita.setVisible(true);
-        }
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_2MouseClicked
 
     private void checkIn_BotonM1_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_3MouseClicked
        if (evt.getClickCount() == 2) {
-        AgregarCita agregarCita = new AgregarCita();
-        agregarCita.setVisible(true);
-        }
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_3MouseClicked
 
     private void checkIn_BotonM1_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_4MouseClicked
         if (evt.getClickCount() == 2) {
-        AgregarCita agregarCita = new AgregarCita();
-        agregarCita.setVisible(true);
-        }
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_4MouseClicked
 
     private void checkIn_BotonM1_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_5MouseClicked
         if (evt.getClickCount() == 2) {
-        AgregarCita agregarCita = new AgregarCita();
-        agregarCita.setVisible(true);
-        }
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_5MouseClicked
 
     private void checkIn_BotonM1_6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_6MouseClicked
         if (evt.getClickCount() == 2) {
-        AgregarCita agregarCita = new AgregarCita();
-        agregarCita.setVisible(true);
-        }
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_6MouseClicked
 
     private void checkIn_BotonM1_7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_7MouseClicked
-        // TODO add your handling code here:
+        if (evt.getClickCount() == 2) {
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_7MouseClicked
 
     private void checkIn_BotonM1_8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_8MouseClicked
-        // TODO add your handling code here:
+        if (evt.getClickCount() == 2) {
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_8MouseClicked
 
     private void checkIn_BotonM1_9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_9MouseClicked
-        // TODO add your handling code here:
+        if (evt.getClickCount() == 2) {
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_9MouseClicked
 
     private void checkIn_BotonM1_10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_10MouseClicked
-        // TODO add your handling code here:
+        if (evt.getClickCount() == 2) {
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_10MouseClicked
 
     private void checkIn_BotonM1_11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_11MouseClicked
-        // TODO add your handling code here:
+        if (evt.getClickCount() == 2) {
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_11MouseClicked
 
     private void checkIn_BotonM1_12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_12MouseClicked
-        // TODO add your handling code here:
+        if (evt.getClickCount() == 2) {
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_12MouseClicked
 
     private void checkIn_BotonM1_13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_13MouseClicked
-        // TODO add your handling code here:
+        if (evt.getClickCount() == 2) {
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_13MouseClicked
 
     private void checkIn_BotonM1_14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_14MouseClicked
-        // TODO add your handling code here:
+        if (evt.getClickCount() == 2) {
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_14MouseClicked
 
     private void checkIn_BotonM1_15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_15MouseClicked
-        // TODO add your handling code here:
+        if (evt.getClickCount() == 2) {
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_15MouseClicked
 
     private void checkIn_BotonM1_16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_16MouseClicked
-        // TODO add your handling code here:
+        if (evt.getClickCount() == 2) {
+        ConsultarCita consultarCita = new ConsultarCita();
+        consultarCita.setVisible(true);
+        }  
     }//GEN-LAST:event_checkIn_BotonM1_16MouseClicked
 
 

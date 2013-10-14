@@ -48,7 +48,7 @@
           <Group type="103" groupAlignment="0" attributes="0">
               <Component id="labelDia" max="32767" attributes="0"/>
               <Group type="102" attributes="0">
-                  <Component id="botonListo" min="-2" pref="233" max="-2" attributes="0"/>
+                  <Component id="botonAceptar" min="-2" pref="233" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
                   <Component id="labelLineaVerticalChica" min="-2" pref="20" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="9" max="-2" attributes="0"/>
@@ -63,7 +63,7 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="103" groupAlignment="3" attributes="0">
-                          <Component id="botonListo" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="botonAceptar" alignment="3" min="-2" max="-2" attributes="0"/>
                           <Component id="botonCancelar" alignment="3" min="-2" max="-2" attributes="0"/>
                       </Group>
                       <Component id="labelLineaVerticalChica" min="-2" pref="30" max="-2" attributes="0"/>
@@ -90,7 +90,7 @@
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="botonListo">
+        <Component class="javax.swing.JLabel" name="botonAceptar">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
@@ -109,9 +109,9 @@
             <Property name="opaque" type="boolean" value="true"/>
           </Properties>
           <Events>
-            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonListoMouseClicked"/>
-            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonListoMouseExited"/>
-            <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="botonListoMouseMoved"/>
+            <EventHandler event="mouseExited" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonAceptarMouseExited"/>
+            <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="botonAceptarMouseClicked"/>
+            <EventHandler event="mouseMoved" listener="java.awt.event.MouseMotionListener" parameters="java.awt.event.MouseEvent" handler="botonAceptarMouseMoved"/>
           </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="botonCancelar">

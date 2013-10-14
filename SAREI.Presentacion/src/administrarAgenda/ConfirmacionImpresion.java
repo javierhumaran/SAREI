@@ -11,12 +11,14 @@ import java.awt.Cursor;
  * @author JHumaran
  */
 public class ConfirmacionImpresion extends javax.swing.JFrame {
-    ImprimirCitas imprimirCitas = new ImprimirCitas();
+    PanelTransparente panelTransparente = new PanelTransparente();
 
     /**
      * Creates new form ConfirmacionImpresion
      */
     public ConfirmacionImpresion() {
+        panelTransparente.setVisible(true);
+        panelTransparente.setEnabled(false);           
         initComponents();
     }
 
@@ -31,7 +33,7 @@ public class ConfirmacionImpresion extends javax.swing.JFrame {
 
         contentPanel = new javax.swing.JPanel();
         labelDia = new javax.swing.JLabel();
-        botonListo = new javax.swing.JLabel();
+        botonAceptar = new javax.swing.JLabel();
         botonCancelar = new javax.swing.JLabel();
         labelLineaVerticalChica = new javax.swing.JLabel();
 
@@ -47,24 +49,24 @@ public class ConfirmacionImpresion extends javax.swing.JFrame {
         labelDia.setText("¿Están correctos los datos de impresión?");
         labelDia.setOpaque(true);
 
-        botonListo.setBackground(new java.awt.Color(255, 255, 255));
-        botonListo.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
-        botonListo.setForeground(new java.awt.Color(0, 0, 0));
-        botonListo.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        botonListo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/botonAceptar.png"))); // NOI18N
-        botonListo.setText("Aceptar");
-        botonListo.setOpaque(true);
-        botonListo.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonListoMouseClicked(evt);
-            }
+        botonAceptar.setBackground(new java.awt.Color(255, 255, 255));
+        botonAceptar.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
+        botonAceptar.setForeground(new java.awt.Color(0, 0, 0));
+        botonAceptar.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        botonAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/botonAceptar.png"))); // NOI18N
+        botonAceptar.setText("Aceptar");
+        botonAceptar.setOpaque(true);
+        botonAceptar.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                botonListoMouseExited(evt);
+                botonAceptarMouseExited(evt);
+            }
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonAceptarMouseClicked(evt);
             }
         });
-        botonListo.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+        botonAceptar.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseMoved(java.awt.event.MouseEvent evt) {
-                botonListoMouseMoved(evt);
+                botonAceptarMouseMoved(evt);
             }
         });
 
@@ -100,7 +102,7 @@ public class ConfirmacionImpresion extends javax.swing.JFrame {
             contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(labelDia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(contentPanelLayout.createSequentialGroup()
-                .addComponent(botonListo, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(botonAceptar, javax.swing.GroupLayout.PREFERRED_SIZE, 233, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(9, 9, 9)
                 .addComponent(labelLineaVerticalChica, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(9, 9, 9)
@@ -113,7 +115,7 @@ public class ConfirmacionImpresion extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(botonListo)
+                        .addComponent(botonAceptar)
                         .addComponent(botonCancelar))
                     .addComponent(labelLineaVerticalChica, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(5, 5, 5))
@@ -134,20 +136,21 @@ public class ConfirmacionImpresion extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void botonListoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonListoMouseClicked
-        imprimirCitas.dispose();
+    private void botonAceptarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonAceptarMouseClicked
+        panelTransparente.dispose();
         dispose();
-    }//GEN-LAST:event_botonListoMouseClicked
+    }//GEN-LAST:event_botonAceptarMouseClicked
 
-    private void botonListoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonListoMouseExited
+    private void botonAceptarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonAceptarMouseExited
         setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
-    }//GEN-LAST:event_botonListoMouseExited
+    }//GEN-LAST:event_botonAceptarMouseExited
 
-    private void botonListoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonListoMouseMoved
+    private void botonAceptarMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonAceptarMouseMoved
         setCursor(new Cursor(Cursor.HAND_CURSOR));
-    }//GEN-LAST:event_botonListoMouseMoved
+    }//GEN-LAST:event_botonAceptarMouseMoved
 
     private void botonCancelarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCancelarMouseClicked
+        panelTransparente.dispose();
         dispose();
     }//GEN-LAST:event_botonCancelarMouseClicked
 
@@ -159,43 +162,9 @@ public class ConfirmacionImpresion extends javax.swing.JFrame {
         setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_botonCancelarMouseMoved
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(ConfirmacionImpresion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(ConfirmacionImpresion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(ConfirmacionImpresion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(ConfirmacionImpresion.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new ConfirmacionImpresion().setVisible(true);
-            }
-        });
-    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel botonAceptar;
     private javax.swing.JLabel botonCancelar;
-    private javax.swing.JLabel botonListo;
     private javax.swing.JPanel contentPanel;
     private javax.swing.JLabel labelDia;
     private javax.swing.JLabel labelLineaVerticalChica;
