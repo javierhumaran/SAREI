@@ -940,6 +940,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_2.setOpaque(true);
         checkIn_BotonM1_2.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_2MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 2;
         gridBagConstraints.gridy = 2;
@@ -953,6 +958,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_3.setOpaque(true);
         checkIn_BotonM1_3.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_3MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 3;
         gridBagConstraints.gridy = 2;
@@ -966,6 +976,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_4.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_4.setOpaque(true);
         checkIn_BotonM1_4.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_4MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 4;
         gridBagConstraints.gridy = 2;
@@ -979,6 +994,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_5.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_5.setOpaque(true);
         checkIn_BotonM1_5.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_5MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 5;
         gridBagConstraints.gridy = 2;
@@ -992,6 +1012,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_6.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_6.setOpaque(true);
         checkIn_BotonM1_6.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_6MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 6;
         gridBagConstraints.gridy = 2;
@@ -1005,6 +1030,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_7.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_7.setOpaque(true);
         checkIn_BotonM1_7.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_7MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 7;
         gridBagConstraints.gridy = 2;
@@ -1018,6 +1048,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_8.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_8.setOpaque(true);
         checkIn_BotonM1_8.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_8MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 8;
         gridBagConstraints.gridy = 2;
@@ -1031,6 +1066,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_9.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_9.setOpaque(true);
         checkIn_BotonM1_9.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_9MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 9;
         gridBagConstraints.gridy = 2;
@@ -1044,6 +1084,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_10.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_10.setOpaque(true);
         checkIn_BotonM1_10.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_10MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 10;
         gridBagConstraints.gridy = 2;
@@ -1057,6 +1102,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_11.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_11.setOpaque(true);
         checkIn_BotonM1_11.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_11.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_11MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 11;
         gridBagConstraints.gridy = 2;
@@ -1070,6 +1120,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_12.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_12.setOpaque(true);
         checkIn_BotonM1_12.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_12.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_12MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 12;
         gridBagConstraints.gridy = 2;
@@ -1083,6 +1138,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_13.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_13.setOpaque(true);
         checkIn_BotonM1_13.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_13.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_13MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 13;
         gridBagConstraints.gridy = 2;
@@ -1096,6 +1156,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_14.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_14.setOpaque(true);
         checkIn_BotonM1_14.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_14.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_14MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 14;
         gridBagConstraints.gridy = 2;
@@ -1109,6 +1174,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_15.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_15.setOpaque(true);
         checkIn_BotonM1_15.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_15.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_15MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 15;
         gridBagConstraints.gridy = 2;
@@ -1122,6 +1192,11 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         checkIn_BotonM1_16.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkIn_BotonM1_16.setOpaque(true);
         checkIn_BotonM1_16.setPreferredSize(new java.awt.Dimension(74, 83));
+        checkIn_BotonM1_16.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                checkIn_BotonM1_16MouseClicked(evt);
+            }
+        });
         gridBagConstraints = new java.awt.GridBagConstraints();
         gridBagConstraints.gridx = 16;
         gridBagConstraints.gridy = 2;
@@ -3867,6 +3942,82 @@ public class PantallaPrincipal extends javax.swing.JFrame {
         }
         
     }//GEN-LAST:event_checkIn_BotonM1_1MouseClicked
+
+    private void checkIn_BotonM1_2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_2MouseClicked
+        
+        if (evt.getClickCount() == 2) {
+        AgregarCita agregarCita = new AgregarCita();
+        agregarCita.setVisible(true);
+        }
+    }//GEN-LAST:event_checkIn_BotonM1_2MouseClicked
+
+    private void checkIn_BotonM1_3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_3MouseClicked
+       if (evt.getClickCount() == 2) {
+        AgregarCita agregarCita = new AgregarCita();
+        agregarCita.setVisible(true);
+        }
+    }//GEN-LAST:event_checkIn_BotonM1_3MouseClicked
+
+    private void checkIn_BotonM1_4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_4MouseClicked
+        if (evt.getClickCount() == 2) {
+        AgregarCita agregarCita = new AgregarCita();
+        agregarCita.setVisible(true);
+        }
+    }//GEN-LAST:event_checkIn_BotonM1_4MouseClicked
+
+    private void checkIn_BotonM1_5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_5MouseClicked
+        if (evt.getClickCount() == 2) {
+        AgregarCita agregarCita = new AgregarCita();
+        agregarCita.setVisible(true);
+        }
+    }//GEN-LAST:event_checkIn_BotonM1_5MouseClicked
+
+    private void checkIn_BotonM1_6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_6MouseClicked
+        if (evt.getClickCount() == 2) {
+        AgregarCita agregarCita = new AgregarCita();
+        agregarCita.setVisible(true);
+        }
+    }//GEN-LAST:event_checkIn_BotonM1_6MouseClicked
+
+    private void checkIn_BotonM1_7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_7MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkIn_BotonM1_7MouseClicked
+
+    private void checkIn_BotonM1_8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_8MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkIn_BotonM1_8MouseClicked
+
+    private void checkIn_BotonM1_9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_9MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkIn_BotonM1_9MouseClicked
+
+    private void checkIn_BotonM1_10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_10MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkIn_BotonM1_10MouseClicked
+
+    private void checkIn_BotonM1_11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_11MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkIn_BotonM1_11MouseClicked
+
+    private void checkIn_BotonM1_12MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_12MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkIn_BotonM1_12MouseClicked
+
+    private void checkIn_BotonM1_13MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_13MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkIn_BotonM1_13MouseClicked
+
+    private void checkIn_BotonM1_14MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_14MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkIn_BotonM1_14MouseClicked
+
+    private void checkIn_BotonM1_15MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_15MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkIn_BotonM1_15MouseClicked
+
+    private void checkIn_BotonM1_16MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_checkIn_BotonM1_16MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_checkIn_BotonM1_16MouseClicked
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
