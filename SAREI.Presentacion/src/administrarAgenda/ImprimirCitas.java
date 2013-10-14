@@ -20,7 +20,7 @@ public class ImprimirCitas extends javax.swing.JFrame {
     
     
     /**
-     * Creates new form ImprimirCitas
+     * Creates new form ImprimirCitas111
      */
     public ImprimirCitas() {
         panelTransparente.setVisible(true);
@@ -47,27 +47,27 @@ public class ImprimirCitas extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        contentPanel = new javax.swing.JPanel();
+        containerPanel = new javax.swing.JPanel();
         labelDia = new javax.swing.JLabel();
         labelEvento = new javax.swing.JLabel();
         botonEvento = new javax.swing.JLabel();
         labelSabado = new javax.swing.JLabel();
+        botonCheckBoxSabado = new javax.swing.JLabel();
+        botonCheckBoxDomingo = new javax.swing.JLabel();
         labelDomingo = new javax.swing.JLabel();
         labelCopias = new javax.swing.JLabel();
         labelNumero = new javax.swing.JLabel();
         botonScrollUp = new javax.swing.JLabel();
         botonScrollDown = new javax.swing.JLabel();
-        botonListo = new javax.swing.JLabel();
-        botonCancelar = new javax.swing.JLabel();
-        labelLineaVerticalChica = new javax.swing.JLabel();
         labelLineaHorizontal = new javax.swing.JLabel();
-        botonCheckBoxSabado = new javax.swing.JLabel();
-        botonCheckBoxDomingo = new javax.swing.JLabel();
+        botonListo = new javax.swing.JLabel();
+        labelLineaVerticalChica = new javax.swing.JLabel();
+        botonCancelar = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
-        contentPanel.setBackground(new java.awt.Color(255, 255, 255));
+        containerPanel.setBackground(new java.awt.Color(255, 255, 255));
 
         labelDia.setBackground(new java.awt.Color(153, 153, 153));
         labelDia.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
@@ -125,6 +125,20 @@ public class ImprimirCitas extends javax.swing.JFrame {
             }
         });
 
+        botonCheckBoxSabado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/uncheckedBox.png"))); // NOI18N
+        botonCheckBoxSabado.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCheckBoxSabadoMouseClicked(evt);
+            }
+        });
+
+        botonCheckBoxDomingo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/uncheckedBox.png"))); // NOI18N
+        botonCheckBoxDomingo.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonCheckBoxDomingoMouseClicked(evt);
+            }
+        });
+
         labelDomingo.setFont(new java.awt.Font("Roboto Cn", 0, 24)); // NOI18N
         labelDomingo.setForeground(new java.awt.Color(51, 51, 51));
         labelDomingo.setText("Domingo");
@@ -156,11 +170,13 @@ public class ImprimirCitas extends javax.swing.JFrame {
         botonScrollDown.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/scrollerDown.png"))); // NOI18N
         botonScrollDown.setToolTipText("");
 
+        labelLineaHorizontal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/lineaHorizontal.png"))); // NOI18N
+
         botonListo.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
         botonListo.setForeground(new java.awt.Color(0, 0, 0));
         botonListo.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         botonListo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/botonAceptar.png"))); // NOI18N
-        botonListo.setText("Imprimir");
+        botonListo.setText("Listo");
         botonListo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botonListoMouseClicked(evt);
@@ -174,6 +190,11 @@ public class ImprimirCitas extends javax.swing.JFrame {
                 botonListoMouseMoved(evt);
             }
         });
+
+        labelLineaVerticalChica.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
+        labelLineaVerticalChica.setForeground(new java.awt.Color(0, 0, 0));
+        labelLineaVerticalChica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        labelLineaVerticalChica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/lineaVertical.png"))); // NOI18N
 
         botonCancelar.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
         botonCancelar.setForeground(new java.awt.Color(0, 0, 0));
@@ -194,113 +215,93 @@ public class ImprimirCitas extends javax.swing.JFrame {
             }
         });
 
-        labelLineaVerticalChica.setFont(new java.awt.Font("Roboto Cn", 0, 18)); // NOI18N
-        labelLineaVerticalChica.setForeground(new java.awt.Color(0, 0, 0));
-        labelLineaVerticalChica.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        labelLineaVerticalChica.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/lineaVertical.png"))); // NOI18N
-
-        labelLineaHorizontal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/lineaHorizontal.png"))); // NOI18N
-
-        botonCheckBoxSabado.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/uncheckedBox.png"))); // NOI18N
-        botonCheckBoxSabado.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                botonCheckBoxSabadoMouseClicked(evt);
-            }
-        });
-
-        botonCheckBoxDomingo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/uncheckedBox.png"))); // NOI18N
-
-        javax.swing.GroupLayout contentPanelLayout = new javax.swing.GroupLayout(contentPanel);
-        contentPanel.setLayout(contentPanelLayout);
-        contentPanelLayout.setHorizontalGroup(
-            contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(labelDia, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(contentPanelLayout.createSequentialGroup()
-                .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(contentPanelLayout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(botonCheckBoxSabado)
-                            .addComponent(botonCheckBoxDomingo))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(labelDomingo)
-                            .addComponent(labelSabado)))
-                    .addGroup(contentPanelLayout.createSequentialGroup()
-                        .addGap(80, 80, 80)
-                        .addComponent(labelEvento)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonEvento))
-                    .addGroup(contentPanelLayout.createSequentialGroup()
-                        .addGap(37, 37, 37)
+        javax.swing.GroupLayout containerPanelLayout = new javax.swing.GroupLayout(containerPanel);
+        containerPanel.setLayout(containerPanelLayout);
+        containerPanelLayout.setHorizontalGroup(
+            containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(labelDia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(labelLineaHorizontal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+            .addGroup(containerPanelLayout.createSequentialGroup()
+                .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(containerPanelLayout.createSequentialGroup()
+                        .addGap(42, 42, 42)
                         .addComponent(labelCopias)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(labelNumero)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(botonScrollUp, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(botonScrollDown, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(botonScrollDown, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(containerPanelLayout.createSequentialGroup()
+                        .addGap(80, 80, 80)
+                        .addComponent(labelEvento)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(botonEvento))
+                    .addGroup(containerPanelLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(botonCheckBoxSabado)
+                            .addComponent(botonCheckBoxDomingo))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(labelDomingo)
+                            .addComponent(labelSabado))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(contentPanelLayout.createSequentialGroup()
-                .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(labelLineaHorizontal, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 302, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, contentPanelLayout.createSequentialGroup()
-                        .addComponent(botonListo, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(labelLineaVerticalChica, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(botonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+            .addGroup(containerPanelLayout.createSequentialGroup()
+                .addComponent(botonListo, javax.swing.GroupLayout.PREFERRED_SIZE, 128, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(labelLineaVerticalChica, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(botonCancelar, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
-        contentPanelLayout.setVerticalGroup(
-            contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(contentPanelLayout.createSequentialGroup()
+        containerPanelLayout.setVerticalGroup(
+            containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(containerPanelLayout.createSequentialGroup()
                 .addComponent(labelDia, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(contentPanelLayout.createSequentialGroup()
-                        .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelEvento)
-                            .addComponent(botonEvento))
-                        .addGap(18, 18, 18)
-                        .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(labelSabado)
-                            .addComponent(botonCheckBoxSabado))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(labelDomingo)
-                            .addComponent(botonCheckBoxDomingo))
-                        .addGap(18, 18, 18)
-                        .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(labelCopias)
-                            .addComponent(labelNumero)))
-                    .addGroup(contentPanelLayout.createSequentialGroup()
+                .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelEvento)
+                    .addComponent(botonEvento))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botonCheckBoxSabado)
+                    .addComponent(labelSabado))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(labelDomingo)
+                    .addComponent(botonCheckBoxDomingo))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(labelCopias)
+                        .addComponent(labelNumero))
+                    .addGroup(containerPanelLayout.createSequentialGroup()
                         .addComponent(botonScrollUp, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(4, 4, 4)
                         .addComponent(botonScrollDown, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(labelLineaHorizontal, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(contentPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(botonCancelar, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(botonListo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, contentPanelLayout.createSequentialGroup()
-                        .addComponent(labelLineaVerticalChica, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
-                        .addContainerGap())))
+                .addGap(5, 5, 5)
+                .addGroup(containerPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(botonListo)
+                    .addComponent(labelLineaVerticalChica, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(botonCancelar))
+                .addGap(5, 5, 5))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(contentPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(containerPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(290, 269));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -340,6 +341,16 @@ public class ImprimirCitas extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_labelSabadoMouseMoved
 
+    private void botonCheckBoxSabadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCheckBoxSabadoMouseClicked
+        if(checkBoxSabado == 0){
+            checkBoxSabado = 1;
+            botonCheckBoxSabado.setIcon(checkBox);
+        } else if(checkBoxSabado == 1){
+            checkBoxSabado = 0;
+            botonCheckBoxSabado.setIcon(uncheckedBox);
+        }
+    }//GEN-LAST:event_botonCheckBoxSabadoMouseClicked
+
     private void labelDomingoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_labelDomingoMouseClicked
         // TODO add your handling code here:
     }//GEN-LAST:event_labelDomingoMouseClicked
@@ -378,15 +389,15 @@ public class ImprimirCitas extends javax.swing.JFrame {
         setCursor(new Cursor(Cursor.HAND_CURSOR));
     }//GEN-LAST:event_botonCancelarMouseMoved
 
-    private void botonCheckBoxSabadoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCheckBoxSabadoMouseClicked
-        if(checkBoxSabado == 0){
-            checkBoxSabado = 1;
-            botonCheckBoxSabado.setIcon(checkBox);
-        } else if(checkBoxSabado == 1){
-            checkBoxSabado = 0;
-            botonCheckBoxSabado.setIcon(uncheckedBox);
+    private void botonCheckBoxDomingoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCheckBoxDomingoMouseClicked
+        if(checkBoxDomingo == 0){
+            checkBoxDomingo = 1;
+            botonCheckBoxDomingo.setIcon(checkBox);
+        } else if(checkBoxDomingo == 1){
+            checkBoxDomingo = 0;
+            botonCheckBoxDomingo.setIcon(uncheckedBox);
         }
-    }//GEN-LAST:event_botonCheckBoxSabadoMouseClicked
+    }//GEN-LAST:event_botonCheckBoxDomingoMouseClicked
 
     /**
      * @param args the command line arguments
@@ -430,7 +441,7 @@ public class ImprimirCitas extends javax.swing.JFrame {
     private javax.swing.JLabel botonListo;
     private javax.swing.JLabel botonScrollDown;
     private javax.swing.JLabel botonScrollUp;
-    private javax.swing.JPanel contentPanel;
+    private javax.swing.JPanel containerPanel;
     private javax.swing.JLabel labelCopias;
     private javax.swing.JLabel labelDia;
     private javax.swing.JLabel labelDomingo;
