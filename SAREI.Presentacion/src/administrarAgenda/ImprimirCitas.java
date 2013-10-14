@@ -130,12 +130,28 @@ public class ImprimirCitas extends javax.swing.JFrame {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botonCheckBoxSabadoMouseClicked(evt);
             }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonCheckBoxSabadoMouseExited(evt);
+            }
+        });
+        botonCheckBoxSabado.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                botonCheckBoxSabadoMouseMoved(evt);
+            }
         });
 
         botonCheckBoxDomingo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/uncheckedBox.png"))); // NOI18N
         botonCheckBoxDomingo.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 botonCheckBoxDomingoMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonCheckBoxDomingoMouseExited(evt);
+            }
+        });
+        botonCheckBoxDomingo.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                botonCheckBoxDomingoMouseMoved(evt);
             }
         });
 
@@ -166,9 +182,32 @@ public class ImprimirCitas extends javax.swing.JFrame {
 
         botonScrollUp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/scrollerUp.png"))); // NOI18N
         botonScrollUp.setToolTipText("");
+        botonScrollUp.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                botonScrollUpMouseClicked(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonScrollUpMouseExited(evt);
+            }
+        });
+        botonScrollUp.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                botonScrollUpMouseMoved(evt);
+            }
+        });
 
         botonScrollDown.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/scrollerDown.png"))); // NOI18N
         botonScrollDown.setToolTipText("");
+        botonScrollDown.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                botonScrollDownMouseExited(evt);
+            }
+        });
+        botonScrollDown.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                botonScrollDownMouseMoved(evt);
+            }
+        });
 
         labelLineaHorizontal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/administrarAgenda/img/lineaHorizontal.png"))); // NOI18N
 
@@ -364,8 +403,8 @@ public class ImprimirCitas extends javax.swing.JFrame {
     }//GEN-LAST:event_labelDomingoMouseMoved
 
     private void botonListoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonListoMouseClicked
-        panelTransparente.dispose();
-        dispose();
+        ConfirmacionImpresion confirmacionImpresion = new ConfirmacionImpresion();
+        confirmacionImpresion.setVisible(true);
     }//GEN-LAST:event_botonListoMouseClicked
 
     private void botonListoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonListoMouseExited
@@ -398,6 +437,72 @@ public class ImprimirCitas extends javax.swing.JFrame {
             botonCheckBoxDomingo.setIcon(uncheckedBox);
         }
     }//GEN-LAST:event_botonCheckBoxDomingoMouseClicked
+
+    private void botonCheckBoxSabadoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCheckBoxSabadoMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_botonCheckBoxSabadoMouseMoved
+
+    private void botonCheckBoxSabadoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCheckBoxSabadoMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_botonCheckBoxSabadoMouseExited
+
+    private void botonCheckBoxDomingoMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCheckBoxDomingoMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_botonCheckBoxDomingoMouseMoved
+
+    private void botonCheckBoxDomingoMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonCheckBoxDomingoMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_botonCheckBoxDomingoMouseExited
+
+    private void botonScrollUpMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonScrollUpMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_botonScrollUpMouseMoved
+
+    private void botonScrollUpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonScrollUpMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_botonScrollUpMouseExited
+
+    private void botonScrollDownMouseMoved(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonScrollDownMouseMoved
+        setCursor(new Cursor(Cursor.HAND_CURSOR));
+    }//GEN-LAST:event_botonScrollDownMouseMoved
+
+    private void botonScrollDownMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonScrollDownMouseExited
+        setCursor(new Cursor(Cursor.DEFAULT_CURSOR));
+    }//GEN-LAST:event_botonScrollDownMouseExited
+
+    private void botonScrollUpMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_botonScrollUpMouseClicked
+        String x = String.valueOf(labelNumero.getText());
+        int i = Integer.parseInt(x);
+        
+        if(i<10){
+            i++;
+            switch(i){
+                case 1: labelNumero.setText("01");
+                    break;
+                case 2: labelNumero.setText("02");
+                    break;
+                case 3: labelNumero.setText("03");
+                    break;
+                case 4: labelNumero.setText("04");
+                    break;
+                case 5: labelNumero.setText("05");
+                    break;
+                case 6: labelNumero.setText("06");
+                    break;
+                case 7: labelNumero.setText("07");
+                    break;
+                case 8: labelNumero.setText("08");
+                    break;
+                case 9: labelNumero.setText("09");
+                    break;
+                case 10: labelNumero.setText("10");
+                    break;
+            }
+        } else if(i == 10){
+            i = 0;
+            labelNumero.setText("00");
+        }
+    }//GEN-LAST:event_botonScrollUpMouseClicked
 
     /**
      * @param args the command line arguments
